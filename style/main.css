@@ -212,13 +212,13 @@ h1 {
   font-weight: bold;
 
 }
-.vault_amount__dollars {
+.vault__amount__dollars {
   font-size: 1rem;
   color: #fff;
   font-weight: bold;
 
 }
-.vault_amount__coins {
+.vault__amount__coins {
   font-size: .9rem;
   font-weight: 600;
   color: #404b5e;
