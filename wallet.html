@@ -32,34 +32,42 @@
   <div class="container">
     <div class="wallet">
       <table class="wallet__balance">
-        <th align="left" valign="middle">
+        <th align="left">
           <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           Token
         </th>
-        <th align="center" valign="middle">
+        <th>
           <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-
           Price
         </th>
-        <th align="right" valign="middle">
+        <th>
           <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-
           Balance
           <br>
-          <span style="font-size: smaller; font-weight: 300;">Amount</span>
+          <span style="font-size: smaller; font-weight: 300; color: grey;">Amount</span>
         </th>
         <tr>
-          <td align="left">
-            <img src="img/Tokens/CAKE.png" alt="logo">
-            CAKE
+          <td>
+            <div class="token">
+              <div class="token__logo">
+                <img src="img/Tokens/CAKE.png" alt="logo">
+              </div>
+              <div class="token__name">
+                CAKE
+              </div>
+            </div>
           </td>
-          <td align="center">
-            <span>$25</span>
+          <td>
+            <div class="token-price">
+              $25
+            </div>
           </td>
-          <td align="right">
-            <span>$2500</span>
-            <br>
-            <span style="font-size: smaller; font-weight: 300;">100</span>
+          <td>
+            <div class="token-amount">
+              <span>$2500</span>
+              <br>
+              <span style="font-size: smaller; font-weight: 300; color: grey;">100</span>
+            </div>
           </td>
         </tr>
       </table>

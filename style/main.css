@@ -241,7 +241,7 @@ h1 {
   padding: 5px 15px 5px 0;
 }
 
-table {
+.vault__stat {
   width: 100%;
   border-collapse: collapse;
   line-height: 1.3;
@@ -252,7 +252,6 @@ table {
 ======================*/
 .wallet {
   margin: 100px 20px 0 20px;
-
 }
 
 .wallet__balance {
@@ -262,12 +261,21 @@ table {
   backdrop-filter: blur( 4.0px );
   -webkit-backdrop-filter: blur( 4.0px );
 
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 1.3;
+
   font-size: 1rem;
   color: #fff;
 }
 
+.wallet__balance th {
+  border-bottom: 1px solid #777d86;
+  padding: 15px;
+}
+
 .wallet__balance td {
-  padding: 5px 15px 5px 0;
+  padding: 15px;
 }
 
 .wallet__balance td img {
@@ -276,6 +284,23 @@ table {
   border-radius: 50%;
 }
 
-.wallet__balance th {
-  padding: 15px 15px;
+.token {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.token__logo {
+  width: 26px;
+  height: 26px;
+}
+.token__name {
+  margin-left: 10px;
+  font-weight: bold;
+}
+.token-price {
+  text-align: center;
+}
+.token-amount {
+  text-align: center;
 }
