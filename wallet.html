@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/main.css">
   <title>YieldPro Wallet</title>
 </head>
@@ -28,34 +28,43 @@
     </div>
   </header>
 
-  <!-- Deposit -->
+  <!-- Wallet balance -->
   <div class="container">
-    <div class="dep">
-      <div class="dep__inner">
-        <h1>Net Worth</h1>
-        <span class="dep__value">$10,606.30</span>
-      </div>
-      <div class="dep__inner">
-        <h1>Total Deposit</h1>
-        <span class="dep__value">$4,541.75</span>
-      </div>
-      <div class="dep__inner">
-        <h1>Total Yield</h1>
-        <span class="dep__value">$652.70</span>
-      </div>
-      <div class="dep__inner">
-        <h1>Total Debt</h1>
-        <span class="dep__value">$0.00</span>
-      </div>
+    <div class="wallet">
+      <table class="wallet__balance">
+        <th align="left" valign="middle">
+          <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          Token
+        </th>
+        <th align="center" valign="middle">
+          <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+
+          Price
+        </th>
+        <th align="right" valign="middle">
+          <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+
+          Balance
+          <br>
+          <span style="font-size: smaller; font-weight: 300;">Amount</span>
+        </th>
+        <tr>
+          <td align="left">
+            <img src="img/Tokens/CAKE.png" alt="logo">
+            CAKE
+          </td>
+          <td align="center">
+            <span>$25</span>
+          </td>
+          <td align="right">
+            <span>$2500</span>
+            <br>
+            <span style="font-size: smaller; font-weight: 300;">100</span>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
-
-  <!-- Wallet balance -->
-
-
-
-
-
 
 </body>
 </html>
