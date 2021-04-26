@@ -365,15 +365,24 @@ h1 {
     display: none;
   }
 
-   /* Main Page */
-
   .vault {
     width: 48.5%;
   }
 }
 
 @media (max-width: 767px) {
-  /* Main Page */
+
+  .wallet-input {
+    margin: 0 15px;
+  }
+
+  .dep h1 {
+    font-size: 1rem;
+  }
+
+  .dep__value {
+    font-size: 1.4rem;
+  }
 
   .vault {
     width: 99%;
