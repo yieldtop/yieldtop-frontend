@@ -117,8 +117,7 @@ h1 {
 .dep {
   display: flex;
   justify-content: space-around;
-  margin-top: 100px;
-  margin-bottom: 30px;
+  margin: 100px 10px 30px 10px;
 
   background: rgba( 40, 46, 58, 0.25 );
   box-shadow: 0 8px 32px 0 rgba(17, 20, 26, 0.651);
@@ -153,7 +152,7 @@ h1 {
 .finance__title {
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin: 30px 10px 0 10px;
   border-bottom: 1px solid #777d86;
 }
 
@@ -181,33 +180,35 @@ h1 {
 }
 
 .finance__vaults {
+  margin-left: 5px;
+  margin-right: 5px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .vault {
   display: flex;
   flex-direction: column;
-  margin: 20px 10px;
-  padding: 10px;
+  width: 32.5%;
+  min-height: 160px;
+  margin: 20px 4px 5px 4px;
   background: rgba( 40, 46, 58, 0.25 );
   box-shadow: 0 8px 32px 0 rgba(17, 20, 26, 0.651);
   border-radius: 10px;
   backdrop-filter: blur( 4.0px );
   -webkit-backdrop-filter: blur( 4.0px );
-  min-width: 340px;
-  min-height: 150px;
 }
 
 .vault__title {
   display: flex;
   align-items: center;
+  padding: 15px;
 }
 
 .vault__title img {
   height: 50px;
   border-radius: 50%;
-  margin: 0;
 }
 
 .vault__amount {
@@ -236,11 +237,11 @@ h1 {
 .vault__value {
   font-size: .9rem;
   color: #fff;
-  margin: 10px 0;
+  padding: 10px 5px 10px 2px;
 }
 
 .vault__value td {
-  padding: 5px 15px 5px 0;
+  padding: 5px 5px 5px 0;
 }
 
 .vault__stat {
@@ -305,4 +306,76 @@ h1 {
 }
 .token-amount {
   text-align: center;
+}
+
+/* Burger
+======================*/
+
+.burger {
+  display: none;
+
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 9px 2px;
+}
+
+.burger__item {
+  display: block;
+  width: 30px;
+  height: 3px;
+
+  background-color: #404b5e;
+
+  font-size: 0;
+  color: transparent;
+
+  position: relative;
+}
+
+.burger__item:before,
+.burger__item:after {
+  content: "";
+  height: 100%;
+
+  background-color: #404b5e;
+
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.burger__item:before {
+  width: 30px;
+  top: -8px;
+}
+
+.burger__item:after {
+  width: 30px;
+  bottom: -8px;
+}
+
+@media (max-width: 991px) {
+
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+   /* Main Page */
+
+  .vault {
+    width: 48.5%;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Main Page */
+
+  .vault {
+    width: 99%;
+  }
 }
