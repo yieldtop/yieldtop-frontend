@@ -371,11 +371,16 @@ h1 {
 }
 
 @media (max-width: 767px) {
+  .header__logo {
+    margin-left: 10px;
+  }
 
   .wallet-input {
     margin: 0 15px;
   }
-
+  .dep {
+    margin: 80px 10px 0 10px;
+  }
   .dep h1 {
     font-size: 1rem;
   }
@@ -386,5 +391,46 @@ h1 {
 
   .vault {
     width: 99%;
+  }
+}
+
+@media (max-width: 501px) {
+  .header__inner {
+    padding: 15px 10px 10px 15px;
+  }
+  .header__logo {
+    margin-left: 0;
+  }
+  .header__inner img {
+    height: 20px;
+  }
+  .dep {
+    margin: 65px 10px 0 10px;
+  }
+  .dep h1 {
+    font-size: 0.8rem;
+  }
+
+  .dep__value {
+    font-size: 1rem;
+  }
+  .wallet-input {
+    padding: 5px 5px 5px 5px;
+    font-size: 12px;
+    line-height: 1.2;
+    width: 300px;
+  }
+}
+
+@media (max-width: 331px) {
+  .dep h1 {
+    font-size: 0.6rem;
+  }
+
+  .dep__value {
+    font-size: 0.8rem;
+  }
+  .finance__title {
+    margin: 10px 10px 0 10px;
   }
 }
