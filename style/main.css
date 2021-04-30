@@ -116,7 +116,6 @@ h1 {
   background-color: #20242A;
   border: 1px solid #202329;
   position: relative;
-  margin: 0 5px;
 }
 
 .tab-content__item {
@@ -142,12 +141,9 @@ h1 {
   display: block;
   width: 30px;
   height: 3px;
-
   background-color: #404b5e;
-
   font-size: 0;
   color: transparent;
-
   position: relative;
 }
 
@@ -155,9 +151,7 @@ h1 {
 .burger__item:after {
   content: "";
   height: 100%;
-
   background-color: #404b5e;
-
   position: absolute;
   right: 0;
   z-index: 1;
@@ -357,6 +351,8 @@ h1 {
   text-align: center;
 }
 
+/* Adaptive
+======================*/
 @media screen and (max-width:992px) {
   .header__inner {
     padding: 10px;
@@ -399,9 +395,136 @@ h1 {
     margin: 140px 10px 10px 10px;
   }
   .wallet {
-    margin: 140px 20px 0 20px;
+    margin: 140px 10px 0 10px;
   }
   .vault {
     width: 98%;
   }
+}
+
+@media screen and (max-width:520px) {
+  .wallet-input {
+    width: 270px;
+  }
+  .dep__inner h1 {
+    font-size: 1rem;
+  }
+  .dep__value {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width:389px) {
+  .header__tabs-item {
+    min-width: 115px;
+  }
+  .dep__inner h1 {
+    font-size: 0.8rem;
+  }
+  .dep__value {
+    font-size: 1.2rem;
+  }
+  .wallet-input {
+    width: 200px;
+  }
+  .dep {
+    margin: 140px 10px 10px 10px;
+  }
+  .wallet {
+    margin: 140px 10px 0 10px;
+  }
+  .header__tabs {
+    margin-bottom: 10px;
+  }
+  .vault__amount__title {
+    font-size: 0.8rem;
+  }
+  .vault__amount__dollars {
+    font-size: 0.8rem;
+  }
+  .vault__amount__coins {
+    font-size: .7rem;
+  }
+  .vault__value {
+    font-size: .7rem;
+  }
+}
+
+@media screen and (max-width:359px) {
+  .dep {
+    margin: 180px 10px 10px 10px;
+  }
+  .wallet {
+    margin: 180px 10px 0 10px;
+  }
+  .wallet__balance {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* LightMode Theme
+======================*/
+
+.dark-mode {
+  background-color: #E3E3E3;
+}
+.dark-mode h1 {
+  color: #808080;
+}
+.dark-mode .header {
+  background-color: #F6F6F6;
+}
+.dark-mode .header__tabs-item {
+  color: #000002;
+}
+.dark-mode .header__tabs-item a {
+  color: #808080;
+}
+.dark-mode .header__tabs-item.active a {
+  color: #808080;
+}
+.dark-mode .header__tabs-item.active {
+  background-color: #20242A;
+  border: 1px solid #202329;
+}
+.dark-mode .burger__item {
+  background-color: #808080;
+}
+.dark-mode .burger__item:before{
+  background-color: #808080;
+}
+.dark-mode .burger__item:after {
+  background-color: #808080;
+}
+.dark-mode .dep {
+  background-color: #F6F6F6;
+}
+.dark-mode .dep__value {
+  color: #000002;
+}
+.dark-mode .platform__title {
+  color: #000002;
+}
+.dark-mode .platform__chain {
+  color: #808080;
+}
+.dark-mode .vault {
+  background-color: #F6F6F6;
+}
+.dark-mode .vault__amount__title {
+  color: #000002;
+}
+.dark-mode .vault__amount__dollars {
+  color: #000002;
+}
+.dark-mode .vault__amount__coins {
+  color: #808080;
+}
+.dark-mode .vault__value {
+  color: #000002;
+}
+.dark-mode .wallet__balance {
+  background-color: #F6F6F6;
+  color: #000002;
 }
