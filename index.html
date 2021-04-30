@@ -1,288 +1,600 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/main.css">
-  <title>YieldPro Main</title>
+  <title>YieldPro</title>
 </head>
 <body>
   <header class="header">
-    <div class="header__inner">
-      <div class="header__logo">
-        <a href="index.html">
-          <img src="img/logo.png" alt="Logo">
-        </a>
-      </div>
-      <input type="text" class="wallet-input">
-      <nav class="nav">
-          <a class="nav__link" href="index.html">Main</a>
-          <a class="nav__link" href="wallet.html">Wallet</a>
-          <a class="nav__link" href="#">#</a>
-          <a class="nav__link" href="#">#</a>
-          <a class="nav__link" href="#">#</a>
-      </nav>
-      <button class="burger" type="button">
-        <span class="burger__item">Menu</span>
-      </button>
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="Logo">
+          </a>
+        </div>
 
-    </div>
+        <ul class="header__tabs">
+          <li class="header__tabs-item js-tab-trigger active" data-tab="1"><a href="#">Dashboard</a></li>
+          <li class="header__tabs-item js-tab-trigger" data-tab="2"><a href="#">Wallet</a></li>
+        </ul>
+
+        <input type="text" class="wallet-input">
+
+        <button class="burger" type="button">
+          <span class="burger__item">Menu</span>
+        </button>
+       </div> <!-- /header__inner -->
+    </div> <!-- /container -->
   </header>
 
-  <!-- Deposit -->
-  <div class="container">
-    <div class="dep">
-      <div class="dep__inner">
-        <h1>Net Worth</h1>
-        <span class="dep__value">$10,606.30</span>
+  <div class="tab-content__item js-tab-content active" data-tab="1">
+    <!-- Deposit -->
+    <div class="container">
+      <div class="dep">
+        <div class="dep__inner">
+          <h1>Net Worth</h1>
+          <span class="dep__value">$10,606.30</span>
+        </div>
+        <div class="dep__inner">
+          <h1>Total Deposit</h1>
+          <span class="dep__value">$4,541.75</span>
+        </div>
+        <div class="dep__inner">
+          <h1>Total Yield</h1>
+          <span class="dep__value">$652.70</span>
+        </div>
       </div>
-      <div class="dep__inner">
-        <h1>Total Deposit</h1>
-        <span class="dep__value">$4,541.75</span>
+    </div>
+
+    <!-- Vaults -->
+    <div class="container">
+      <div class="finance">
+        <div class="finance__title">
+          <img src="img/Platforms/beefyFinance.png" alt="logo">
+          <div class="platform">
+            <span class="platform__title">beefy.finance</span>
+            <span class="platform__chain">Binance Smart Chain</span>
+          </div>
+        </div>
+        <div class="finance__vaults">
+          <div class="vault">
+            <div class="vault__title">
+              <img src="img/Tokens/xBLZD.png" alt="logo">
+              <div class="vault__amount">
+                <span class="vault__amount__title">Moo Blizzard BLZD</span>
+                <span class="vault__amount__dollars">$310.10</span>
+                <span class="vault__amount__coins">10.16 BLZD</span>
+              </div>
+            </div>
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr>
+                  <td>
+                    Deposit
+                    <br>
+                    Yield
+                  </td>
+                  <td>
+                    <span>10.01</span>
+                    BLZD
+                    <br>
+                    <span>0.15872</span>
+                    BLZD
+                  </td>
+                  <td>
+                    <span>$305.28</span>
+                    <br>
+                    <span>$4.82</span>
+                  </td>
+                  <td>
+                    <span>11.43k %</span>
+                    <br>
+                    <span>APY</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="vault">
+            <div class="vault__title">
+              <img src="img/Tokens/BIFI.png" alt="logo">
+              <div class="vault__amount">
+                <span class="vault__amount__title">BIFI Maxi</span>
+                <span class="vault__amount__dollars">$2,269.19</span>
+                <span class="vault__amount__coins">1.18 BIFI</span>
+              </div>
+            </div>
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr>
+                  <td>
+                    Deposit
+                    <br>
+                    Yield
+                  </td>
+                  <td>
+                    <span>1.14</span>
+                    BIFI
+                    <br>
+                    <span>0.008374</span>
+                    BIFI
+                  </td>
+                  <td>
+                    <span>$2.25k</span>
+                    <br>
+                    <span>$16.82</span>
+                  </td>
+                  <td>
+                    <span>19.20 %</span>
+                    <br>
+                    <span>APY</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="vault">
+            <div class="vault__title">
+              <img src="img/Tokens/xBLZD.png" alt="logo">
+              <div class="vault__amount">
+                <span class="vault__amount__title">Moo Blizzard BLZD</span>
+                <span class="vault__amount__dollars">$310.10</span>
+                <span class="vault__amount__coins">10.16 BLZD</span>
+              </div>
+            </div>
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr>
+                  <td>
+                    Deposit
+                    <br>
+                    Yield
+                  </td>
+                  <td>
+                    <span>10.01</span>
+                    BLZD
+                    <br>
+                    <span>0.15872</span>
+                    BLZD
+                  </td>
+                  <td>
+                    <span>$305.28</span>
+                    <br>
+                    <span>$4.82</span>
+                  </td>
+                  <td>
+                    <span>11.43k %</span>
+                    <br>
+                    <span>APY</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="vault">
+            <div class="vault__title">
+              <img src="img/Tokens/BIFI.png" alt="logo">
+              <div class="vault__amount">
+                <span class="vault__amount__title">BIFI Maxi</span>
+                <span class="vault__amount__dollars">$2,269.19</span>
+                <span class="vault__amount__coins">1.18 BIFI</span>
+              </div>
+            </div>
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr>
+                  <td>
+                    Deposit
+                    <br>
+                    Yield
+                  </td>
+                  <td>
+                    <span>1.14</span>
+                    BIFI
+                    <br>
+                    <span>0.008374</span>
+                    BIFI
+                  </td>
+                  <td>
+                    <span>$2.25k</span>
+                    <br>
+                    <span>$16.82</span>
+                  </td>
+                  <td>
+                    <span>19.20 %</span>
+                    <br>
+                    <span>APY</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="dep__inner">
-        <h1>Total Yield</h1>
-        <span class="dep__value">$652.70</span>
-      </div>
-      <div class="dep__inner">
-        <h1>Total Debt</h1>
-        <span class="dep__value">$0.00</span>
+      <div class="finance">
+        <div class="finance__title">
+          <img src="img/Platforms/pancakeBunny.png" alt="logo">
+          <div class="platform">
+            <span class="platform__title">PancakeBunny</span>
+            <span class="platform__chain">Binance Smart Chain</span>
+          </div>
+        </div>
+        <div class="finance__vaults">
+          <div class="vault">
+            <div class="vault__title">
+              <img src="img/Tokens/CAKE.png" alt="logo">
+              <div class="vault__amount">
+                <span class="vault__amount__title">Cake Vault</span>
+                <span class="vault__amount__dollars">$2,363.92</span>
+                <span class="vault__amount__coins">120.51 Cake</span>
+              </div>
+            </div>
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr>
+                  <td>
+                    Deposit
+                    <br>
+                    Yield
+                    <br>
+                    <br>
+                  </td>
+                  <td>
+                    <span>120.19</span>
+                    Cake
+                    <br>
+                    <span>0.230551</span>
+                    Cake
+                    <br>
+                    <span>0.024352</span>
+                    BUNNY
+                  </td>
+                  <td>
+                    <span>$2.36k</span>
+                    <br>
+                    <span>$4.52</span>
+                    <br>
+                    <span>$6.52</span>
+                  </td>
+                  <td>
+                    <span>302.02 %</span>
+                    <br>
+                    <span>APY</span>
+                    <br>
+                    <br>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Vaults -->
-  <div class="container">
-    <div class="finance">
-      <div class="finance__title">
-        <img src="img/Platforms/beefyFinance.png" alt="logo">
-        <div class="platform">
-          <span class="platform__title">beefy.finance</span>
-          <span class="platform__chain">Binance Smart Chain</span>
-        </div>
-      </div>
-      <div class="finance__vaults">
-        <div class="vault">
-          <div class="vault__title">
-            <img src="img/Tokens/xBLZD.png" alt="logo">
-            <div class="vault__amount">
-              <span class="vault__amount__title">Moo Blizzard BLZD</span>
-              <span class="vault__amount__dollars">$310.10</span>
-              <span class="vault__amount__coins">10.16 BLZD</span>
-            </div>
-          </div>
-          <div class="vault__value">
-            <table class="vault__stat">
-              <tr>
-                <td>
-                  Deposit
-                  <br>
-                  Yield
-                </td>
-                <td>
-                  <span>10.01</span>
-                  BLZD
-                  <br>
-                  <span>0.15872</span>
-                  BLZD
-                </td>
-                <td>
-                  <span>$305.28</span>
-                  <br>
-                  <span>$4.82</span>
-                </td>
-                <td>
-                  <span>11.43k %</span>
-                  <br>
-                  <span>APY</span>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-
-        <div class="vault">
-          <div class="vault__title">
-            <img src="img/Tokens/BIFI.png" alt="logo">
-            <div class="vault__amount">
-              <span class="vault__amount__title">BIFI Maxi</span>
-              <span class="vault__amount__dollars">$2,269.19</span>
-              <span class="vault__amount__coins">1.18 BIFI</span>
-            </div>
-          </div>
-          <div class="vault__value">
-            <table class="vault__stat">
-              <tr>
-                <td>
-                  Deposit
-                  <br>
-                  Yield
-                </td>
-                <td>
-                  <span>1.14</span>
+  <div class="tab-content__item js-tab-content" data-tab="2">
+    <!-- Wallet balance -->
+    <div class="container">
+      <div class="wallet">
+        <table class="wallet__balance">
+          <th align="left">
+            <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            Token
+          </th>
+          <th>
+            <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            Price
+          </th>
+          <th>
+            <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            Balance
+            <br>
+            <span style="font-size: smaller; font-weight: 300; color: grey;">Amount</span>
+          </th>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/CAKE.png" alt="logo">
+                </div>
+                <div class="token__name">
+                  CAKE
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $25
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$2500</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">100</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/DOT.png" alt="logo">
+                </div>
+                <div class="token__name">
+                  DOT
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $40
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$2500</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">62.5</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/BIFI.png" alt="logo">
+                </div>
+                <div class="token__name">
                   BIFI
-                  <br>
-                  <span>0.008374</span>
-                  BIFI
-                </td>
-                <td>
-                  <span>$2.25k</span>
-                  <br>
-                  <span>$16.82</span>
-                </td>
-                <td>
-                  <span>19.20 %</span>
-                  <br>
-                  <span>APY</span>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-
-        <div class="vault">
-          <div class="vault__title">
-            <img src="img/Tokens/xBLZD.png" alt="logo">
-            <div class="vault__amount">
-              <span class="vault__amount__title">Moo Blizzard BLZD</span>
-              <span class="vault__amount__dollars">$310.10</span>
-              <span class="vault__amount__coins">10.16 BLZD</span>
-            </div>
-          </div>
-          <div class="vault__value">
-            <table class="vault__stat">
-              <tr>
-                <td>
-                  Deposit
-                  <br>
-                  Yield
-                </td>
-                <td>
-                  <span>10.01</span>
-                  BLZD
-                  <br>
-                  <span>0.15872</span>
-                  BLZD
-                </td>
-                <td>
-                  <span>$305.28</span>
-                  <br>
-                  <span>$4.82</span>
-                </td>
-                <td>
-                  <span>11.43k %</span>
-                  <br>
-                  <span>APY</span>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-
-        <div class="vault">
-          <div class="vault__title">
-            <img src="img/Tokens/BIFI.png" alt="logo">
-            <div class="vault__amount">
-              <span class="vault__amount__title">BIFI Maxi</span>
-              <span class="vault__amount__dollars">$2,269.19</span>
-              <span class="vault__amount__coins">1.18 BIFI</span>
-            </div>
-          </div>
-          <div class="vault__value">
-            <table class="vault__stat">
-              <tr>
-                <td>
-                  Deposit
-                  <br>
-                  Yield
-                </td>
-                <td>
-                  <span>1.14</span>
-                  BIFI
-                  <br>
-                  <span>0.008374</span>
-                  BIFI
-                </td>
-                <td>
-                  <span>$2.25k</span>
-                  <br>
-                  <span>$16.82</span>
-                </td>
-                <td>
-                  <span>19.20 %</span>
-                  <br>
-                  <span>APY</span>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="finance">
-      <div class="finance__title">
-        <img src="img/Platforms/pancakeBunny.png" alt="logo">
-        <div class="platform">
-          <span class="platform__title">PancakeBunny</span>
-          <span class="platform__chain">Binance Smart Chain</span>
-        </div>
-      </div>
-      <div class="finance__vaults">
-        <div class="vault">
-          <div class="vault__title">
-            <img src="img/Tokens/CAKE.png" alt="logo">
-            <div class="vault__amount">
-              <span class="vault__amount__title">Cake Vault</span>
-              <span class="vault__amount__dollars">$2,363.92</span>
-              <span class="vault__amount__coins">120.51 Cake</span>
-            </div>
-          </div>
-          <div class="vault__value">
-            <table class="vault__stat">
-              <tr>
-                <td>
-                  Deposit
-                  <br>
-                  Yield
-                  <br>
-                  <br>
-                </td>
-                <td>
-                  <span>120.19</span>
-                  Cake
-                  <br>
-                  <span>0.230551</span>
-                  Cake
-                  <br>
-                  <span>0.024352</span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $9865
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$14797.5</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/BNB.png" alt="logo">
+                </div>
+                <div class="token__name">
+                  BNB
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $9865
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$14797.5</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/BUNNY.png" alt="logo">
+                </div>
+                <div class="token__name">
                   BUNNY
-                </td>
-                <td>
-                  <span>$2.36k</span>
-                  <br>
-                  <span>$4.52</span>
-                  <br>
-                  <span>$6.52</span>
-                </td>
-                <td>
-                  <span>302.02 %</span>
-                  <br>
-                  <span>APY</span>
-                  <br>
-                  <br>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $9865
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$14797.5</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/BUSD.png" alt="logo">
+                </div>
+                <div class="token__name">
+                  BUSD
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $9865
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$14797.5</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/TWT.png" alt="logo">
+                </div>
+                <div class="token__name">
+                  TWT
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $9865
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$14797.5</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/1INCH.png" alt="logo">
+                </div>
+                <div class="token__name">
+                  1INCH
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $9865
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$14797.5</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/SOL.png" alt="logo">
+                </div>
+                <div class="token__name">
+                  SOL
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $9865
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$14797.5</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/xBLZD.png" alt="logo">
+                </div>
+                <div class="token__name">
+                  xBLZD
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $9865
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$14797.5</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/UNI.png" alt="logo">
+                </div>
+                <div class="token__name">
+                  UNI
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $9865
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$14797.5</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="token">
+                <div class="token__logo">
+                  <img src="img/Tokens/ETH.png" alt="logo">
+                </div>
+                <div class="token__name">
+                  ETH
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="token-price">
+                $9865
+              </div>
+            </td>
+            <td>
+              <div class="token-amount">
+                <span>$14797.5</span>
+                <br>
+                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
+              </div>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
