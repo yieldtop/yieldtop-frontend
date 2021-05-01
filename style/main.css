@@ -354,12 +354,12 @@ h1 {
 /* Footer
 ======================*/
 .footer {
+  margin-top: 30px;
   border-top: 1px solid gray;
 }
 .footer__block {
   margin: 10px;
 }
-
 .copyright {
   margin: 10px;
 }
