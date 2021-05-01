@@ -486,13 +486,13 @@ h1 {
 ======================*/
 
 .dark-mode {
-  background-color: #E3E3E3;
+  background-color: #F3F7F8;
 }
 .dark-mode h1 {
   color: #808080;
 }
 .dark-mode .header {
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
 }
 .dark-mode .header__tabs-item {
   color: #000002;
@@ -504,7 +504,7 @@ h1 {
   color: #808080;
 }
 .dark-mode .header__tabs-item.active {
-  background-color: #E3E3E3;
+  background-color: #F3F7F8;
   border: 1px solid #cecece;
 }
 .dark-mode .burger__item {
@@ -517,7 +517,7 @@ h1 {
   background-color: #808080;
 }
 .dark-mode .dep {
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
 }
 .dark-mode .dep__value {
   color: #000002;
@@ -529,7 +529,7 @@ h1 {
   color: #808080;
 }
 .dark-mode .vault {
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
 }
 .dark-mode .vault__amount__title {
   color: #000002;
@@ -544,7 +544,7 @@ h1 {
   color: #000002;
 }
 .dark-mode .wallet__balance {
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
   color: #000002;
 }
 .dark-mode .wallet__balance th {
