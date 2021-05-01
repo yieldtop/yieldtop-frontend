@@ -351,6 +351,19 @@ h1 {
   text-align: center;
 }
 
+/* Footer
+======================*/
+.footer {
+  border-top: 1px solid gray;
+}
+.footer__block {
+  margin: 10px;
+}
+
+.copyright {
+  margin: 10px;
+}
+
 /* Adaptive
 ======================*/
 @media screen and (max-width:992px) {
