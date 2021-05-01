@@ -185,7 +185,7 @@ h1 {
 
 .dep__value {
   display: block;
-  margin-top: 15px;
+  margin-top: 10px;
   color: #fff;
   font-size: 2rem;
 }
@@ -400,6 +400,12 @@ h1 {
   .vault {
     width: 98%;
   }
+  .platform__title {
+    font-size: 1.3rem;
+  }
+  .platform__chain {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width:520px) {
@@ -407,10 +413,10 @@ h1 {
     width: 270px;
   }
   .dep__inner h1 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .dep__value {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -485,8 +491,8 @@ h1 {
   color: #808080;
 }
 .dark-mode .header__tabs-item.active {
-  background-color: #20242A;
-  border: 1px solid #202329;
+  background-color: #E3E3E3;
+  border: 1px solid #cecece;
 }
 .dark-mode .burger__item {
   background-color: #808080;
@@ -527,4 +533,7 @@ h1 {
 .dark-mode .wallet__balance {
   background-color: #F6F6F6;
   color: #000002;
+}
+.dark-mode .wallet__balance th {
+  border-bottom: 1px solid #babec5;
 }

@@ -1,6 +1,6 @@
-// переключение табов
+// Табы
 $('.js-tab-trigger').click(function() {
-  var id = $(this).attr('data-tab'),
+  let id = $(this).attr('data-tab'),
       content = $('.js-tab-content[data-tab="'+ id +'"]');
 
 $('.js-tab-trigger.active').removeClass('active');
@@ -11,12 +11,11 @@ $('.js-tab-content.active').removeClass('active');
 });
 
 $('.js-tab-trigger').click(function() {
-  var id = $(this).attr('data-tab'),
+  let id = $(this).attr('data-tab'),
       content = $('.js-tab-content[data-tab="'+ id +'"]');
 });
 
-
-// переключение темы оформления
+// смена темы оформления
 theme.onclick = function() {
   document.body.classList.toggle('dark-mode');
 }
