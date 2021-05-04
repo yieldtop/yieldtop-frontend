@@ -1,4 +1,4 @@
-// Табы
+// табы dashboard и wallet
 $('.js-tab-trigger').click(function() {
   let id = $(this).attr('data-tab'),
       content = $('.js-tab-content[data-tab="'+ id +'"]');

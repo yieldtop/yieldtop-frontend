@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #20242A;
 }
+
 body.lock {
   overflow: hidden;
 }
@@ -26,7 +27,6 @@ ul, ol, li {
   list-style: none;
 }
 
-
 h1 {
   color: #404b5e;
   font-size: 1.2rem;
@@ -34,16 +34,14 @@ h1 {
 
 /* Container
 ======================*/
-
 .container {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-
 }
+
 /* Header
 ======================*/
-
 .header {
   width: 100%;
   position: fixed;
@@ -60,6 +58,7 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: #262A32;
+  box-shadow: 0.4em 0.4em 5px rgba(19, 19, 19, 0.5);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   z-index: 2;
@@ -94,7 +93,6 @@ h1 {
   background: #fff;
   border: 1px solid #b9b9b9;
   border-radius: 4px;
-
   background-image: url(../img/nav/search-icon.svg);
   background-repeat: no-repeat;
   background-position: right 12px center;
@@ -104,7 +102,6 @@ h1 {
 
 /* Header tabs
 ======================*/
-
 .header__tabs {
   display: flex;
   font-size: 14px;
@@ -149,13 +146,13 @@ h1 {
 
 /* Burger
 ======================*/
-
 .header__burger {
   display: block;
   width: 30px;
   height: 20px;
   position: relative;
   z-index: 3;
+  cursor: pointer;
 }
 
 .header__burger span {
@@ -207,6 +204,7 @@ h1 {
   height: 60%;
   overflow: auto;
   background-color: #2f333d;
+  box-shadow: 0.4em 0.4em 5px rgba(19, 19, 19, 0.5);
   z-index: 1;
   padding: 70px 10px 20px 10px;
   border-bottom-left-radius: 15px;
@@ -224,19 +222,19 @@ h1 {
   text-decoration: none;
   font-size: 1.2rem;
 }
+
 .header__list {
   display: block;
   text-align: right;
   padding-right: 25px;
 }
+
 .header__list li {
   margin-bottom: 20px;
 }
 
-
 /* Deposit
 ======================*/
-
 .dep {
   display: flex;
   justify-content: space-around;
@@ -259,7 +257,6 @@ h1 {
 
 /* Vaults
 ======================*/
-
 .finance {
   max-width: 99%;
   margin: 0 auto;
@@ -336,19 +333,20 @@ h1 {
   font-size: 1rem;
   color: #fff;
   font-weight: bold;
-
 }
+
 .vault__amount__dollars {
   font-size: 1rem;
   color: #fff;
   font-weight: bold;
-
 }
+
 .vault__amount__coins {
   font-size: .9rem;
   font-weight: 600;
   color: #404b5e;
 }
+
 .vault__value {
   font-size: .9rem;
   color: #fff;
@@ -407,13 +405,16 @@ h1 {
   width: 26px;
   height: 26px;
 }
+
 .token__name {
   margin-left: 10px;
   font-weight: bold;
 }
+
 .token-price {
   text-align: center;
 }
+
 .token-amount {
   text-align: center;
 }
@@ -424,9 +425,11 @@ h1 {
   margin-top: 30px;
   border-top: 1px solid gray;
 }
+
 .footer__block {
   margin: 10px;
 }
+
 .copyright {
   margin: 10px;
 }
@@ -475,6 +478,7 @@ h1 {
 }
 .dark-mode .header:before {
   background-color: #FFFFFF;
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
 }
 .dark-mode .header__tabs-item {
   color: #000002;
@@ -490,7 +494,8 @@ h1 {
   border: 1px solid #cecece;
 }
 .dark-mode .header__burger-menu {
-  background-color: #cacaca;
+  background-color: #F3F7F8;
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
 }
 .dark-mode .dep {
   background-color: #FFFFFF;
@@ -582,7 +587,6 @@ h1 {
   .platform__chain {
     font-size: 0.8rem;
   }
-
   .header__burger-menu {
     padding: 130px 10px 20px 10px;
   }
