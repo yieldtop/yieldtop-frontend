@@ -15,6 +15,18 @@ $('.js-tab-trigger').click(function() {
       content = $('.js-tab-content[data-tab="'+ id +'"]');
 });
 
+// бургер меню
+$(document).ready(function() {
+  $('.header__burger').click(function(e) {
+    $('.header__burger,.header__burger-menu').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+  $('.header__list').click(function(e) {
+      $('.header__burger,.header__burger-menu').removeClass('active');
+      $('body').removeClass('lock');
+  });
+});
+
 // смена темы оформления
 theme.onclick = function() {
   document.body.classList.toggle('dark-mode');
