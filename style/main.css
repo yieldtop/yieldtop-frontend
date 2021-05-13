@@ -109,10 +109,8 @@ h1 {
   text-transform: uppercase;
   position: relative;
   z-index: 3;
-
-  background-color: #1c1f25;
+  background-color: #20242A;
   border-radius: 4px;
-
 }
 
 .header__tabs-item {
@@ -448,6 +446,11 @@ h1 {
 
 .footer__social-link {
   text-decoration: none;
+  color: #404b5e;
+}
+
+.footer__social-link:hover {
+  color: #8097be;
 }
 
 /* Полоса прокрутки ======================*/
@@ -496,18 +499,17 @@ h1 {
   background-color: #FFFFFF;
   box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
 }
-.dark-mode .header__tabs-item {
-  color: #000002;
+.dark-mode .header__tabs {
+  background-color: #eeeeee;
 }
 .dark-mode .header__tabs-item a {
   color: #808080;
 }
 .dark-mode .header__tabs-item.active a {
-  color: #808080;
+  color: #2b2b2b;
 }
 .dark-mode .header__tabs-item.active {
-  background-color: #F3F7F8;
-  border: 1px solid #cecece;
+  background-color: #FFFFFF;
 }
 .dark-mode .header__burger-menu {
   background-color: #F3F7F8;
@@ -573,7 +575,7 @@ h1 {
 @media screen and (max-width:768px) {
   .header__inner {
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content:space-evenly;
   }
   .header__logo {
     margin: 10px;
@@ -596,47 +598,11 @@ h1 {
   .platform__chain {
     font-size: 0.8rem;
   }
-  .header__burger-menu {
-    padding: 130px 10px 20px 10px;
-  }
-}
-
-@media screen and (max-width:520px) {
-  .header__tabs-item {
-    min-width: 115px;
-  }
-  .wallet-input {
-    width: 270px;
-  }
-  .dep__inner h1 {
-    font-size: 0.9rem;
-  }
-  .dep__value {
-    font-size: 1.1rem;
-  }
-}
-
-@media screen and (max-width:389px) {
-  .header__tabs-item {
-    min-width: 115px;
-  }
   .dep__inner h1 {
     font-size: 0.8rem;
   }
   .dep__value {
-    font-size: 1.2rem;
-  }
-  .wallet-input {
-    width: 200px;
-  }
-  .dep {
-    margin: 140px 10px 10px 10px;
-  }
-  .wallet {
-    margin: 140px 10px 0 10px;
-  }
-  .header__tabs {
-    margin-bottom: 10px;
+    font-size: 1.1rem;
   }
   .vault__amount__title {
     font-size: 0.8rem;
@@ -650,17 +616,50 @@ h1 {
   .vault__value {
     font-size: .7rem;
   }
+  .vault__amount__title {
+    font-size: 0.8rem;
+  }
+  .vault__amount__dollars {
+    font-size: 0.8rem;
+  }
+  .vault__amount__coins {
+    font-size: .7rem;
+  }
+  .vault__value {
+    font-size: .7rem;
+  }
+  .wallet__balance {
+    font-size: 0.8rem;
+  }
+  .header__burger-menu {
+    padding: 130px 10px 20px 10px;
+  }
 }
 
-@media screen and (max-width:370px) {
+@media screen and (max-width:541px) {
+  .header__tabs-item {
+    min-width: 115px;
+  }
+  .wallet-input {
+    width: 200px;
+  }
+  .dep {
+    margin: 140px 10px 10px 10px;
+  }
+  .wallet {
+    margin: 140px 10px 0 10px;
+  }
+  .header__tabs {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width:496px) {
   .dep {
     margin: 180px 10px 10px 10px;
   }
   .wallet {
     margin: 180px 10px 0 10px;
-  }
-  .wallet__balance {
-    font-size: 0.8rem;
   }
   .header__burger-menu {
     padding: 170px 10px 20px 10px;
