@@ -69,12 +69,12 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px 10px 30px;
+  padding: 10px;
 }
 
 .header__logo {
   flex: 0 0 100px;
-  margin-left: 15px;
+  margin: 0 10px;
   position: relative;
   z-index: 3;
 }
@@ -85,10 +85,10 @@ h1 {
 }
 
 .wallet-input {
-  padding: 5px 30px 5px 12px;
+  padding: 4px 30px 4px 12px;
   margin: 0 10px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.43;
   width: 370px;
   background: #fff;
   border: 1px solid #b9b9b9;
@@ -109,16 +109,21 @@ h1 {
   text-transform: uppercase;
   position: relative;
   z-index: 3;
+
+  background-color: #1c1f25;
+  border-radius: 4px;
+
 }
 
 .header__tabs-item {
-  margin: 0;
-  padding: 8px;
+  margin: 2px;
+  padding: 6px;
   min-width: 150px;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
   color: #fff;
+  transition: all 0.3s ease 0s;
 }
 
 .header__tabs-item a {
@@ -127,12 +132,11 @@ h1 {
 }
 
 .header__tabs-item.active a {
-  color: #687997;
+  color: #b8c8e2;
 }
 
 .header__tabs-item.active {
-  background-color: #20242A;
-  border: 1px solid #202329;
+  background-color: #262A32;
   position: relative;
 }
 
@@ -153,6 +157,7 @@ h1 {
   position: relative;
   z-index: 3;
   cursor: pointer;
+  margin: 0 10px;
 }
 
 .header__burger span {
@@ -465,7 +470,7 @@ h1 {
   }
 
   ::-webkit-scrollbar{
-  width: 11px;
+  width: 7px;
   }
 
   /* LightMode Theme
@@ -535,15 +540,8 @@ h1 {
 /* Adaptive
 ======================*/
 @media screen and (max-width:992px) {
-  .header__inner {
-    padding: 10px;
-  }
-  .header__logo {
-    margin: 0 10px;
-  }
-  .header__logo img {
-    height: 30px;
-  }
+
+
   .header__tabs-item {
     min-width: 130px;
   }
