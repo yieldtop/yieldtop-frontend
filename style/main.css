@@ -384,7 +384,7 @@ h1 {
 }
 
 .wallet__balance th {
-  border-bottom: 1px solid #777d86;
+  border-bottom: 1px solid #2c3441;
   padding: 15px;
 }
 
@@ -426,7 +426,7 @@ h1 {
 ======================*/
 .footer {
   margin-top: 30px;
-  border-top: 1px solid gray;
+  border-top: 1px solid #404b5e;
 }
 
 .footer__block {
@@ -515,6 +515,10 @@ h1 {
   background-color: #F3F7F8;
   box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
 }
+.dark-mode .wallet-input {
+  background-color: #eeeeee;
+  border: 1px solid #b9b9b9;
+}
 .dark-mode .dep {
   background-color: #FFFFFF;
 }
@@ -547,14 +551,15 @@ h1 {
   color: #000002;
 }
 .dark-mode .wallet__balance th {
-  border-bottom: 1px solid #babec5;
+  border-bottom: 1px solid #ced3db;
+}
+.dark-mode .footer {
+  border-top: 1px solid #ced3db;
 }
 
 /* Adaptive
 ======================*/
 @media screen and (max-width:992px) {
-
-
   .header__tabs-item {
     min-width: 130px;
   }
@@ -580,68 +585,53 @@ h1 {
   .header__logo {
     margin: 10px;
   }
+  .wallet {
+    margin: 140px 10px 0 10px;
+  }
   .wallet-input {
     margin: 10px;
   }
   .dep {
     margin: 140px 10px 10px 10px;
   }
-  .wallet {
-    margin: 140px 10px 0 10px;
-  }
   .vault {
     width: 98%;
+  }
+  .header__burger-menu {
+    padding: 130px 10px 20px 10px;
+  }
+  .dep__inner h1 {
+    font-size: 1rem;
+  }
+  .dep__value {
+    font-size: 1.2rem;
   }
   .platform__title {
     font-size: 1.3rem;
   }
   .platform__chain {
-    font-size: 0.8rem;
-  }
-  .dep__inner h1 {
-    font-size: 0.8rem;
-  }
-  .dep__value {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .vault__amount__title {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .vault__amount__dollars {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .vault__amount__coins {
-    font-size: .7rem;
-  }
-  .vault__value {
-    font-size: .7rem;
-  }
-  .vault__amount__title {
     font-size: 0.8rem;
-  }
-  .vault__amount__dollars {
-    font-size: 0.8rem;
-  }
-  .vault__amount__coins {
-    font-size: .7rem;
-  }
-  .vault__value {
-    font-size: .7rem;
-  }
-  .wallet__balance {
-    font-size: 0.8rem;
-  }
-  .header__burger-menu {
-    padding: 130px 10px 20px 10px;
   }
 }
 
 @media screen and (max-width:541px) {
+  .header__logo {
+    display: none;
+  }
   .header__tabs-item {
-    min-width: 115px;
+    min-width: 110px;
   }
   .wallet-input {
-    width: 200px;
+    width: 70vw;
   }
   .dep {
     margin: 140px 10px 10px 10px;
@@ -650,18 +640,41 @@ h1 {
     margin: 140px 10px 0 10px;
   }
   .header__tabs {
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (max-width:496px) {
-  .dep {
-    margin: 180px 10px 10px 10px;
-  }
-  .wallet {
-    margin: 180px 10px 0 10px;
+    margin: 10px 0;
   }
   .header__burger-menu {
     padding: 170px 10px 20px 10px;
+  }
+}
+@media screen and (max-width:400px) {
+  .header__tabs-item {
+    min-width: 100px;
+  }
+  .header__tabs-item a {
+    font-size: 0.7rem;
+  }
+  .dep__inner h1 {
+    font-size: 0.8rem;
+  }
+  .dep__value {
+    font-size: 0.9rem;
+  }
+  .platform__title {
+    font-size: 1.1rem;
+  }
+  .platform__chain {
+    font-size: 0.8rem;
+  }
+  .vault__amount__title {
+    font-size: 0.8rem;
+  }
+  .vault__amount__dollars {
+    font-size: 0.8rem;
+  }
+  .vault__amount__coins {
+    font-size: 0.7rem;
+  }
+  .vault__value {
+    font-size: 0.7rem;
   }
 }
