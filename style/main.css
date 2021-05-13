@@ -85,13 +85,13 @@ h1 {
 }
 
 .wallet-input {
-  padding: 4px 30px 4px 12px;
+  padding: 5px 30px 5px 12px;
   margin: 0 10px;
   font-size: 14px;
-  line-height: 1.43;
+  line-height: 1.4;
   width: 370px;
-  background: #fff;
-  border: 1px solid #b9b9b9;
+  background: #20242A;
+  border: 1px solid #20242A;
   border-radius: 4px;
   background-image: url(../img/nav/search-icon.svg);
   background-repeat: no-repeat;
@@ -100,11 +100,21 @@ h1 {
   z-index: 3;
 }
 
+.wallet-input::placeholder {
+  color: #404b5e;
+}
+
+.wallet-input:focus {
+  border-color: #FED32C;
+  outline: 0;
+  caret-color: #FED32C;
+}
+
 /* Header tabs
 ======================*/
 .header__tabs {
   display: flex;
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
@@ -116,7 +126,7 @@ h1 {
 .header__tabs-item {
   margin: 2px;
   padding: 6px;
-  min-width: 150px;
+  min-width: 140px;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
@@ -130,11 +140,11 @@ h1 {
 }
 
 .header__tabs-item.active a {
-  color: #b8c8e2;
+  color: #0f1011;
 }
 
 .header__tabs-item.active {
-  background-color: #262A32;
+  background-color: #FED32C;
   position: relative;
 }
 
@@ -226,6 +236,10 @@ h1 {
   font-size: 1.2rem;
 }
 
+.header__link:hover {
+  color: #FED32C;
+}
+
 .header__list {
   display: block;
   text-align: right;
@@ -271,7 +285,7 @@ h1 {
   display: flex;
   align-items: center;
   margin: 30px 10px 10px 10px;
-  border-bottom: 1px solid #777d86;
+  border-bottom: 1px solid #252A31;
 }
 
 .finance__title img {
@@ -426,7 +440,7 @@ h1 {
 ======================*/
 .footer {
   margin-top: 30px;
-  border-top: 1px solid #404b5e;
+  border-top: 1px solid #252A31;
 }
 
 .footer__block {
@@ -436,6 +450,7 @@ h1 {
 .copyright__text {
   margin: 10px;
   text-align: center;
+  color: #404b5e;
 }
 
 .footer__social {
@@ -447,14 +462,16 @@ h1 {
 .footer__social-link {
   text-decoration: none;
   color: #404b5e;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 
 .footer__social-link:hover {
-  color: #8097be;
+  color: #FED32C;
 }
 
 /* Полоса прокрутки ======================*/
-::-webkit-scrollbar-button {
+/* ::-webkit-scrollbar-button {
   background-image:url('');
   background-repeat:no-repeat;
   width:6px;
@@ -469,7 +486,7 @@ h1 {
   ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background-color:#F59F02;
+  background-color:#FED32C;
   box-shadow:0px 1px 1px #fff inset;
   background-image:url('https://yield.galyshev.pro/img/scrollbar.png');
   background-position:center;
@@ -485,7 +502,7 @@ h1 {
 
   ::-webkit-scrollbar{
   width: 7px;
-  }
+  } */
 
   /* LightMode Theme
 ======================*/
@@ -506,10 +523,10 @@ h1 {
   color: #808080;
 }
 .dark-mode .header__tabs-item.active a {
-  color: #2b2b2b;
+  color: #000002;
 }
 .dark-mode .header__tabs-item.active {
-  background-color: #FFFFFF;
+  background-color: #ffe066;
 }
 .dark-mode .header__burger-menu {
   background-color: #F3F7F8;
@@ -517,13 +534,19 @@ h1 {
 }
 .dark-mode .wallet-input {
   background-color: #eeeeee;
-  border: 1px solid #b9b9b9;
+  border: 1px solid #eeeeee;
+}
+.dark-mode .wallet-input::placeholder {
+  color: #808080;
 }
 .dark-mode .dep {
   background-color: #FFFFFF;
 }
 .dark-mode .dep__value {
   color: #000002;
+}
+.dark-mode .finance__title {
+  border-bottom: 1px solid #dadada;
 }
 .dark-mode .platform__title {
   color: #000002;
@@ -551,10 +574,10 @@ h1 {
   color: #000002;
 }
 .dark-mode .wallet__balance th {
-  border-bottom: 1px solid #ced3db;
+  border-bottom: 1px solid #dadada;
 }
 .dark-mode .footer {
-  border-top: 1px solid #ced3db;
+  border-top: 1px solid #dadada;
 }
 
 /* Adaptive
