@@ -437,6 +437,17 @@ h1 {
 
 .copyright__text {
   margin: 10px;
+  text-align: center;
+}
+
+.footer__social {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer__social-link {
+  text-decoration: none;
 }
 
 /* Полоса прокрутки ======================*/
