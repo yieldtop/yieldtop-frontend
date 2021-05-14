@@ -19,11 +19,9 @@ $('.js-tab-trigger').click(function() {
 $(document).ready(function() {
   $('.header__burger').click(function(e) {
     $('.header__burger,.header__burger-menu').toggleClass('active');
-    $('body').toggleClass('lock');
   });
   $('.header__list').click(function(e) {
       $('.header__burger,.header__burger-menu').removeClass('active');
-      $('body').removeClass('lock');
   });
 });
 
