@@ -32,6 +32,7 @@
         <div class="header__burger">
           <span></span>
         </div>
+
         <div class="header__burger-menu">
           <div class="header__logo">
             <a href="index.html">
@@ -61,11 +62,11 @@
           <div class="copyright__text">
             <div>Copiright &copy; 2021 TopCap. All Rights Reserved</div>
             <div>Made with &#10084; by Ururus</div>
-        </div>
-        </div>
-       </div>
-    </div>
-  </header>
+          </div>
+        </div> <!-- /header__burger-menu -->
+      </div> <!-- /header__inner -->
+    </div> <!-- /container -->
+  </header> <!-- /header -->
 
   <!-- Dashboard -->
   <div class="tab-content__item js-tab-content active" data-tab="1">
@@ -73,15 +74,15 @@
       <div class="dep">
         <div class="dep__inner">
           <h1>Net Worth</h1>
-          <span class="dep__value">$14,606.30</span>
+          <span class="dep__value">$1,460,600.30</span>
         </div>
         <div class="dep__inner">
           <h1>Total Deposit</h1>
-          <span class="dep__value">$13,941.75</span>
+          <span class="dep__value">$1,394,112.75</span>
         </div>
         <div class="dep__inner">
           <h1>Total Yield</h1>
-          <span class="dep__value">$652.70</span>
+          <span class="dep__value">$6,500.70</span>
         </div>
       </div>
     </div>
@@ -96,165 +97,154 @@
             <span class="platform__chain">Binance Smart Chain</span>
           </div>
         </div>
+
         <div class="finance__vaults">
-          <div class="vault">
-            <div class="vault__title">
-              <img src="img/tokens/xBLZD.png" alt="logo">
-              <div class="vault__amount">
-                <span class="vault__amount__title">Moo Blizzard BLZD</span>
-                <span class="vault__amount__dollars">$310.10</span>
-                <span class="vault__amount__coins">10.16 BLZD</span>
+          <div class="vaults__wrapper">
+            <div class="vault">
+              <div class="vault__title">
+                <img src="img/tokens/xBLZD.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">Moo Blizzard BLZD</span>
+                </div>
               </div>
-            </div>
-            <div class="vault__value">
-              <table class="vault__stat">
-                <tr>
-                  <td>
-                    Deposit
-                    <br>
-                    Yield
-                  </td>
-                  <td>
-                    <span>10.01</span>
-                    BLZD
-                    <br>
-                    <span>0.15872</span>
-                    BLZD
-                  </td>
-                  <td>
-                    <span>$305.28</span>
-                    <br>
-                    <span>$4.82</span>
-                  </td>
-                  <td>
-                    <span>11.43k %</span>
-                    <br>
-                    <span>APY</span>
-                  </td>
-                </tr>
-              </table>
+
+              <div class="vault__value">
+                <table class="vault__stat">
+                  <tr class="vault__stat-deposit">
+                    <th>Deposit:</th>
+                    <td><span>10.01</span> BLZD</td>
+                   <td><span>$305.28</span></td>
+                  </tr>
+                  <tr class="vault__stat-yield">
+                    <th>Yield:</th>
+                    <td><span>0.15872</span> BLZD</td>
+                    <td><span>$4.82</span></td>
+                  </tr>
+                  <tr class="vault__stat-apy">
+                    <th>APY:</th>
+                    <td></td>
+                    <td><span>11.43k %</span></td>
+                  </tr>
+                  <tr class="vault__stat-total">
+                    <th>Total:</th>
+                    <td><span>10.16</span> BLZD</td>
+                    <td><span>$61000.10</span></td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
 
-          <div class="vault">
-            <div class="vault__title">
-              <img src="img/tokens/BIFI.png" alt="logo">
-              <div class="vault__amount">
-                <span class="vault__amount__title">BIFI Maxi</span>
-                <span class="vault__amount__dollars">$2,269.19</span>
-                <span class="vault__amount__coins">1.18 BIFI</span>
+          <div class="vaults__wrapper">
+            <div class="vault">
+              <div class="vault__title">
+                <img src="img/tokens/BIFI.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">BIFI Maxi</span>
+                </div>
               </div>
-            </div>
-            <div class="vault__value">
-              <table class="vault__stat">
-                <tr>
-                  <td>
-                    Deposit
-                    <br>
-                    Yield
-                  </td>
-                  <td>
-                    <span>1.14</span>
-                    BIFI
-                    <br>
-                    <span>0.008374</span>
-                    BIFI
-                  </td>
-                  <td>
-                    <span>$2.25k</span>
-                    <br>
-                    <span>$16.82</span>
-                  </td>
-                  <td>
-                    <span>19.20 %</span>
-                    <br>
-                    <span>APY</span>
-                  </td>
-                </tr>
-              </table>
+
+              <div class="vault__value">
+                <table class="vault__stat">
+                  <tr class="vault__stat-deposit">
+                    <th>Deposit:</th>
+                    <td><span>100.14</span> BIF</td>
+                   <td><span>$305000.28</span></td>
+                  </tr>
+                  <tr class="vault__stat-yield">
+                    <th>Yield:</th>
+                    <td><span>0.008374</span> BIFI</td>
+                    <td><span>$40.82</span></td>
+                  </tr>
+                  <tr class="vault__stat-apy">
+                    <th>APY:</th>
+                    <td></td>
+                    <td><span>19.20 %</span></td>
+                  </tr>
+                  <tr class="vault__stat-total">
+                    <th>Total:</th>
+                    <td><span>100.148</span> BIFI</td>
+                    <td><span>$305000.28</span></td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
 
-          <div class="vault">
-            <div class="vault__title">
-              <img src="img/tokens/1INCH.png" alt="logo">
-              <div class="vault__amount">
-                <span class="vault__amount__title">Moo 1INCH 1INCH</span>
-                <span class="vault__amount__dollars">$4,623.44</span>
-                <span class="vault__amount__coins">814.71 1INCH</span>
+          <div class="vaults__wrapper">
+            <div class="vault">
+              <div class="vault__title">
+                <img src="img/tokens/1INCH.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">Moo 1INCH 1INCH</span>
+                </div>
               </div>
-            </div>
-            <div class="vault__value">
-              <table class="vault__stat">
-                <tr>
-                  <td>
-                    Deposit
-                    <br>
-                    Yield
-                  </td>
-                  <td>
-                    <span>782.92</span>
-                    1INCH
-                    <br>
-                    <span>31.79</span>
-                    1INCH
-                  </td>
-                  <td>
-                    <span>$4.44k</span>
-                    <br>
-                    <span>$180.38</span>
-                  </td>
-                  <td>
-                    <span>48.26 %</span>
-                    <br>
-                    <span>APY</span>
-                  </td>
-                </tr>
-              </table>
+
+              <div class="vault__value">
+                <table class="vault__stat">
+                  <tr class="vault__stat-deposit">
+                    <th>Deposit:</th>
+                    <td><span>10.01</span> 1INCH</td>
+                   <td><span>$305.28</span></td>
+                  </tr>
+                  <tr class="vault__stat-yield">
+                    <th>Yield:</th>
+                    <td><span>0.15872</span> 1INCH</td>
+                    <td><span>$4.82</span></td>
+                  </tr>
+                  <tr class="vault__stat-apy">
+                    <th>APY:</th>
+                    <td></td>
+                    <td><span>11.43k %</span></td>
+                  </tr>
+                  <tr class="vault__stat-total">
+                    <th>Total:</th>
+                    <td><span>10.16</span> 1INCH</td>
+                    <td><span>$3100000.10</span></td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
 
-          <div class="vault">
-            <div class="vault__title">
-              <img src="img/tokens/BIFI.png" alt="logo">
-              <div class="vault__amount">
-                <span class="vault__amount__title">BIFI Maxi</span>
-                <span class="vault__amount__dollars">$2,269.19</span>
-                <span class="vault__amount__coins">1.18 BIFI</span>
+          <div class="vaults__wrapper">
+            <div class="vault">
+              <div class="vault__title">
+                <img src="img/tokens/1INCH.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">Moo 1INCH 1INCH</span>
+                </div>
+              </div>
+
+              <div class="vault__value">
+                <table class="vault__stat">
+                  <tr class="vault__stat-deposit">
+                    <th>Deposit:</th>
+                    <td><span>10.01</span> 1INCH</td>
+                   <td><span>$305.28</span></td>
+                  </tr>
+                  <tr class="vault__stat-yield">
+                    <th>Yield:</th>
+                    <td><span>0.15872</span> 1INCH</td>
+                    <td><span>$4.82</span></td>
+                  </tr>
+                  <tr class="vault__stat-apy">
+                    <th>APY:</th>
+                    <td></td>
+                    <td><span>11.43k %</span></td>
+                  </tr>
+                  <tr class="vault__stat-total">
+                    <th>Total:</th>
+                    <td><span>10.16</span> 1INCH</td>
+                    <td><span>$3100000.10</span></td>
+                  </tr>
+                </table>
               </div>
             </div>
-            <div class="vault__value">
-              <table class="vault__stat">
-                <tr>
-                  <td>
-                    Deposit
-                    <br>
-                    Yield
-                  </td>
-                  <td>
-                    <span>1.14</span>
-                    BIFI
-                    <br>
-                    <span>0.008374</span>
-                    BIFI
-                  </td>
-                  <td>
-                    <span>$2.25k</span>
-                    <br>
-                    <span>$16.82</span>
-                  </td>
-                  <td>
-                    <span>19.20 %</span>
-                    <br>
-                    <span>APY</span>
-                  </td>
-                </tr>
-              </table>
-            </div>
           </div>
-
         </div>
       </div>
+
       <div class="finance">
         <div class="finance__title">
           <img src="img/platforms/pancakeBunny.png" alt="logo">
@@ -263,59 +253,53 @@
             <span class="platform__chain">Binance Smart Chain</span>
           </div>
         </div>
+
         <div class="finance__vaults">
-          <div class="vault">
-            <div class="vault__title">
-              <img src="img/tokens/CAKE.png" alt="logo">
-              <div class="vault__amount">
-                <span class="vault__amount__title">Cake Vault</span>
-                <span class="vault__amount__dollars">$4,363.92</span>
-                <span class="vault__amount__coins">120.51 Cake</span>
+          <div class="vaults__wrapper">
+            <div class="vault">
+              <div class="vault__title">
+                <img src="img/tokens/CAKE.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">Cake Vault</span>
+                </div>
               </div>
-            </div>
-            <div class="vault__value">
-              <table class="vault__stat">
-                <tr>
-                  <td>
-                    Deposit
-                    <br>
-                    Yield
-                    <br>
-                    <br>
-                  </td>
-                  <td>
-                    <span>120.19</span>
-                    Cake
-                    <br>
-                    <span>0.230551</span>
-                    Cake
-                    <br>
-                    <span>0.024352</span>
-                    BUNNY
-                  </td>
-                  <td>
-                    <span>$4.36k</span>
-                    <br>
-                    <span>$4.52</span>
-                    <br>
-                    <span>$6.52</span>
-                  </td>
-                  <td>
-                    <span>302.02 %</span>
-                    <br>
-                    <span>APY</span>
-                    <br>
-                    <br>
-                  </td>
-                </tr>
-              </table>
+
+              <div class="vault__value">
+                <table class="vault__stat">
+                  <tr class="vault__stat-deposit">
+                    <th>Deposit:</th>
+                    <td><span>150.89</span> Cake</td>
+                   <td><span>$30500.28</span></td>
+                  </tr>
+                  <tr class="vault__stat-yield">
+                    <th>Yield:</th>
+                    <td><span>15.872</span> Cake</td>
+                    <td><span>$3000.82</span></td>
+                  </tr>
+                  <tr class="vault__stat-yield">
+                    <th></th>
+                    <td><span>1.45</span> Bunny</td>
+                    <td><span>$900.82</span></td>
+                  </tr>
+                  <tr class="vault__stat-apy">
+                    <th>APY:</th>
+                    <td></td>
+                    <td><span>302.02 %</span></td>
+                  </tr>
+                  <tr class="vault__stat-total">
+                    <th>Total:</th>
+                    <td><span>166.666</span> Cake</td>
+                    <td><span>$34560.10</span></td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
-
   <!-- Wallet balance -->
   <div class="tab-content__item js-tab-content" data-tab="2">
     <div class="container">
@@ -720,5 +704,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="script/main.js"></script>
 
-</body>
+</body> <!-- /body -->
 </html>

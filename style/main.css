@@ -74,6 +74,7 @@ h1 {
 }
 .header__logo {
   text-align: center;
+  margin: 20px 0;
 }
 .header__logo img {
   max-width: 40%;
@@ -210,9 +211,9 @@ h1 {
   position: fixed;
   top: 0;
   left: -100%;
-  width: calc(20%);
-  min-width: 210px;
-  height: 100vh;
+  width: calc(30%);
+  min-width: 250px;
+  height: 100%;
   overflow: auto;
   background-color: #262A32;
   /* box-shadow: 0.4em 0.4em 5px rgba(19, 19, 19, 0.5); */
@@ -285,10 +286,9 @@ h1 {
 /* Vaults
 ======================*/
 .finance {
-  max-width: 99%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .finance__title {
@@ -322,23 +322,23 @@ h1 {
 }
 
 .finance__vaults {
-  margin-left: 5px;
-  margin-right: 5px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+
+.vaults__wrapper {
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 33.3333%;
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
 }
 
 .vault {
-  display: flex;
-  flex-direction: column;
-  width: 32.5%;
-  min-height: 160px;
-  margin: 10px 4px 5px 4px;
   background-color: #262A32;
   border-radius: 10px;
 }
-
 .vault__title {
   display: flex;
   align-items: center;
@@ -362,26 +362,14 @@ h1 {
   font-weight: bold;
 }
 
-.vault__amount__dollars {
-  font-size: 1rem;
-  color: #fff;
-  font-weight: bold;
-}
-
-.vault__amount__coins {
-  font-size: .9rem;
-  font-weight: bold;
-  color: #505e75;
-}
-
 .vault__value {
   font-size: .9rem;
   color: #fff;
-  padding: 10px 5px 10px 2px;
+  padding: 10px 20px 10px 15px;
 }
 
 .vault__value td {
-  padding: 5px 5px 5px 0;
+  padding: 15px 5px 15px 0;
 }
 
 .vault__stat {
@@ -389,6 +377,27 @@ h1 {
   border-collapse: collapse;
   line-height: 1.3;
   text-align: right;
+}
+
+.vault__stat th {
+  font-weight: bold;
+  color: #505e75;
+  font-size: 0.9rem;
+}
+
+.vault__stat-deposit {
+
+}
+.vault__stat-yield {
+}
+.vault__stat-apy td {
+  color: #FFAD17;
+  font-weight: bold;
+}
+.vault__stat-total {
+  border-top: 1px solid #343a44;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 /* Wallet
@@ -573,10 +582,7 @@ h1 {
 .dark-mode .vault__amount__title {
   color: #808080;
 }
-.dark-mode .vault__amount__dollars {
-  color: #000002;
-}
-.dark-mode .vault__amount__coins {
+.vault__stat th {
   color: #808080;
 }
 .dark-mode .vault__value {
@@ -597,25 +603,12 @@ h1 {
 ======================*/
 @media screen and (max-width:992px) {
   .header__tabs-item {
-    min-width: 130px;
+    min-width: 100px;
   }
-  .header__logo img {
+  .vaults__wrapper {
+    width: 50%;
+    flex: 0 0 50%;
     max-width: 50%;
-  }
-  .header__burger-menu {
-    width: 40%;
-  }
-  .dep {
-    margin: 80px 10px 10px 10px;
-  }
-  .finance__title {
-    margin: 10px;
-  }
-  .vault {
-    width: 48.5%;
-  }
-  .vault__value {
-    padding: 10px;
   }
 }
 
@@ -624,12 +617,13 @@ h1 {
     flex-wrap: wrap;
     justify-content:space-evenly;
   }
-  .header__logo {
-    margin: 10px;
+
+  .vaults__wrapper {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
-  .header__logo img {
-    max-width: 50%;
-  }
+
   .wallet {
     margin: 140px 10px 0 10px;
   }
@@ -638,20 +632,19 @@ h1 {
     width: 70vw;
   }
   .dep {
-    margin: 140px 10px 10px 10px;
-  }
-  .vault {
-    width: 98%;
+    margin: 110px 10px 10px 10px;
   }
   .header__burger-menu {
-    padding: 130px 10px 20px 10px;
-    width: 60%;
+    width: calc(50%);
   }
   .dep__inner h1 {
     font-size: 1rem;
   }
   .dep__value {
     font-size: 1.2rem;
+  }
+  .finance__title {
+    margin-top: 10px;
   }
   .platform__title {
     font-size: 1.3rem;
@@ -670,33 +663,7 @@ h1 {
   }
 }
 
-/* @media screen and (max-width:541px) {
-
-  .header__logo img {
-    max-width: 50%;
-  }
-  .header__tabs-item {
-    min-width: 110px;
-  }
-  .wallet-input {
-    width: 70vw;
-  }
-  .dep {
-    margin: 140px 10px 10px 10px;
-  }
-  .wallet {
-    margin: 140px 10px 0 10px;
-  }
-  .header__tabs {
-    margin: 10px 0;
-  }
-
-  .header__burger-menu {
-    padding-top: 150px;
-    width: 80%;
-  }
-} */
-@media screen and (max-width:320px) {
+@media screen and (max-width:375px) {
   .header__tabs-item {
     min-width: 100px;
   }
