@@ -4,7 +4,7 @@ body {
   font-size: 16px;
   color: #6c7279;
   -webkit-font-smoothing: antialiased;
-  background-color: #212529;
+  background-color: #20242A;
 }
 
 body.lock {
@@ -28,7 +28,7 @@ ul, ol, li {
 }
 
 h1 {
-  color: #A0A0A0;
+  color: #505e75;
   font-size: 1.2rem;
 }
 
@@ -57,8 +57,8 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #212529;
-  box-shadow: 0.4em 0.4em 5px rgba(19, 19, 19, 0.5);
+  background-color: #20242A;
+  /* box-shadow: 0.4em 0.4em 5px rgba(19, 19, 19, 0.5); */
   /* border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px; */
   z-index: 2;
@@ -72,17 +72,13 @@ h1 {
   align-items: center;
   padding: 10px;
 }
-
 .header__logo {
-  flex: 0 0 20px;
-  margin: 10px 10px 50px 10px;
   text-align: center;
-  /* position: relative;
-  z-index: 3; */
 }
-
 .header__logo img {
   max-width: 40%;
+  max-height: 60px;
+  text-align: center;
 }
 
 .wallet-input {
@@ -90,9 +86,9 @@ h1 {
   margin: 0 10px;
   font-size: 1rem;
   line-height: 1.8;
-  color: #ffffff;
+  color: #505e75;
   width: 370px;
-  background: #2D3136;
+  background: #2b2f38;
   border: 1px solid #2D3136;
   border-radius: 40px;
   background-image: url(../img/nav/search-icon.svg);
@@ -103,22 +99,19 @@ h1 {
 }
 
 .wallet-input::placeholder {
-  color: #ffffff;
+  color: #505e75;
 }
 
 .wallet-input:focus {
-  border-color: #FD413C;
+  border-color: #FFAD17;
   outline: 0;
-  caret-color: #FD413C;
+  caret-color: #FFAD17;
 }
 
 /* Header tabs
 ======================*/
 .header__tabs {
   display: flex;
-  font-size: 1rem;
-  font-weight: 700;
-  /* text-transform: uppercase; */
   position: relative;
   z-index: 3;
   border-radius: 4px;
@@ -128,23 +121,22 @@ h1 {
   margin: 2px;
   padding: 6px;
   min-width: 120px;
-  /* border-radius: 4px; */
   cursor: pointer;
   text-align: center;
   /* transition: all 0.3s ease 0s; */
 }
 .header__tabs-item a:hover {
-  color: #FD413C;
+  color: #FFAD17;
 }
 
 .header__tabs-item a {
+  font-size: 1rem;
   text-decoration: none;
-  color: #A6A7A9;
-  font-weight: normal;
+  color: #505e75;
 }
 
 .header__tabs-item.active a {
-  color: #FD413C;
+  color: #FFAD17;
   font-weight: bold;
 }
 
@@ -168,14 +160,14 @@ h1 {
   width: 30px;
   height: 20px;
   position: relative;
-  z-index: 3;
+  z-index: 5;
   cursor: pointer;
   margin: 0 10px;
 }
 
 .header__burger span {
   position: absolute;
-  background-color: #A6A7A9;
+  background-color: #505e75;
   left: 0;
   width: 100%;
   height: 2px;
@@ -186,7 +178,7 @@ h1 {
 .header__burger:before,
 .header__burger:after {
   content: '';
-  background-color: #A6A7A9;
+  background-color: #505e75;
   position: absolute;
   width: 100%;
   height: 2px;
@@ -218,15 +210,18 @@ h1 {
   position: fixed;
   top: 0;
   left: -100%;
-  width: 25%;
-  height: 100%;
+  width: calc(20%);
+  min-width: 210px;
+  height: 100vh;
   overflow: auto;
-  background-color: #272B2F;
+  background-color: #262A32;
   /* box-shadow: 0.4em 0.4em 5px rgba(19, 19, 19, 0.5); */
-  z-index: 1;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 70px 10px 20px 10px;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-radius: 0px 30px 30px 0px;
   transition: all 0.3s ease 0s;
 }
 
@@ -242,7 +237,7 @@ h1 {
 }
 
 .header__link:hover {
-  color: #FD413C;
+  color: #FFAD17;
 }
 
 .header__list {
@@ -254,6 +249,11 @@ h1 {
 .header__list li {
   margin-bottom: 20px;
 }
+.header__list img {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
 
 /* Deposit
 ======================*/
@@ -261,7 +261,7 @@ h1 {
   display: flex;
   justify-content: space-around;
   margin: 90px 10px 10px 10px;
-  background-color: #212529;
+  background-color: #20242A;
   border-radius: 10px;
 }
 
@@ -276,7 +276,7 @@ h1 {
 
 .dep__value {
   display: block;
-  margin-top: 10px;
+  margin-top: 5px;
   color: #fff;
   font-size: 1.8rem;
   font-weight: bold;
@@ -318,7 +318,7 @@ h1 {
 .platform__chain {
   font-size: 1rem;
   font-weight: 600;
-  color: #B2B3B4;
+  color: #505e75;
 }
 
 .finance__vaults {
@@ -335,7 +335,7 @@ h1 {
   width: 32.5%;
   min-height: 160px;
   margin: 10px 4px 5px 4px;
-  background-color: #272B2F;
+  background-color: #262A32;
   border-radius: 10px;
 }
 
@@ -359,7 +359,7 @@ h1 {
 .vault__amount__title {
   font-size: 1rem;
   color: #fff;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .vault__amount__dollars {
@@ -370,8 +370,8 @@ h1 {
 
 .vault__amount__coins {
   font-size: .9rem;
-  font-weight: normal;
-  color: #B2B3B4;
+  font-weight: bold;
+  color: #505e75;
 }
 
 .vault__value {
@@ -398,7 +398,7 @@ h1 {
 }
 
 .wallet__balance {
-  background-color: #272B2F;
+  background-color: #262A32;
   border-radius: 10px;
   width: 100%;
   border-collapse: collapse;
@@ -472,13 +472,13 @@ h1 {
 
 .footer__social-link {
   text-decoration: none;
-  color: #B2B3B4;
+  color: #505e75;
   font-weight: 700;
   font-size: 0.8rem;
 }
 
 .footer__social-link:hover {
-  color: #FD413C;
+  color: #FFAD17;
 }
 
 /* Полоса прокрутки ======================*/
@@ -497,8 +497,8 @@ h1 {
   ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background-color:#FD413C;
-  box-shadow:0px 1px 1px #FD413C inset;
+  background-color:#FFAD17;
+  box-shadow:0px 1px 1px #FFAD17 inset;
   background-image:url('https://yield.galyshev.pro/img/scrollbar.png');
   background-position:center;
   background-repeat:no-repeat;
@@ -525,7 +525,6 @@ h1 {
 }
 .dark-mode .header:before {
   background-color: #eeeeee;
-  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
 }
 .dark-mode .header__tabs {
   background-color: #eeeeee;
@@ -534,7 +533,7 @@ h1 {
   color: #808080;
 }
 .dark-mode .header__tabs-item.active a {
-  color: #FD413C;
+  color: #FFAD17;
 }
 .dark-mode .header__burger-menu {
   background-color: #FFFFFF;
@@ -542,6 +541,9 @@ h1 {
 }
 .dark-mode .header__link {
   color: #000002;
+}
+.dark-mode .header__list a:hover {
+  color: #FFAD17;
 }
 .dark-mode .wallet-input {
   background-color: #dadada;
