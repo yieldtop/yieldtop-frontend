@@ -635,7 +635,7 @@ h1 {
     width: calc(50%);
   }
   .dep__inner h1 {
-    font-size: 1.1rem;
+    font-size: 1.rem;
   }
   .dep__value {
     font-size: 1.25rem;
@@ -650,7 +650,7 @@ h1 {
     font-size: 1rem;
   }
   .vault__amount__title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -659,31 +659,24 @@ h1 {
     min-width: 100px;
   }
   .header__tabs-item a {
-    font-size: 0.7rem;
-  }
-  .dep__inner h1 {
-    font-size: 0.8rem;
-  }
-  .dep__value {
     font-size: 0.9rem;
   }
+  .dep__inner h1 {
+    font-size: 0.9rem;
+  }
+  .dep__value {
+    font-size: 1rem;
+  }
   .platform__title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   .platform__chain {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .vault__amount__title {
-    font-size: 0.8rem;
-  }
-  .vault__amount__dollars {
-    font-size: 0.8rem;
-  }
-  .vault__amount__coins {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .vault__value {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
-
