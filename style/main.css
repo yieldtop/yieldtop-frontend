@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
   font-size: 16px;
   color: #6c7279;
   -webkit-font-smoothing: antialiased;
@@ -29,7 +30,7 @@ ul, ol, li {
 
 h1 {
   color: #505e75;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 /* Container
@@ -58,9 +59,6 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: #20242A;
-  /* box-shadow: 0.4em 0.4em 5px rgba(19, 19, 19, 0.5); */
-  /* border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px; */
   z-index: 2;
 }
 
@@ -124,14 +122,14 @@ h1 {
   min-width: 120px;
   cursor: pointer;
   text-align: center;
-  /* transition: all 0.3s ease 0s; */
 }
+
 .header__tabs-item a:hover {
   color: #FFAD17;
 }
 
 .header__tabs-item a {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: #505e75;
 }
@@ -142,7 +140,6 @@ h1 {
 }
 
 .header__tabs-item.active {
-  /* background-color: #FED32C; */
   position: relative;
 }
 
@@ -216,7 +213,6 @@ h1 {
   height: 100%;
   overflow: auto;
   background-color: #262A32;
-  /* box-shadow: 0.4em 0.4em 5px rgba(19, 19, 19, 0.5); */
   z-index: 4;
   display: flex;
   flex-direction: column;
@@ -232,7 +228,7 @@ h1 {
 
 .header__link {
   color: #D8D8D8;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -310,13 +306,13 @@ h1 {
 }
 
 .platform__title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #fff;
   font-weight: bold;
   padding-bottom: 5px;
 }
 .platform__chain {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #505e75;
 }
@@ -324,6 +320,7 @@ h1 {
 .finance__vaults {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 5px;
 }
 
 .vaults__wrapper {
@@ -342,7 +339,7 @@ h1 {
 .vault__title {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 15px 15px 5px 15px;
 }
 
 .vault__title img {
@@ -357,19 +354,19 @@ h1 {
 }
 
 .vault__amount__title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #fff;
   font-weight: bold;
 }
 
 .vault__value {
-  font-size: .9rem;
+  font-size: 1.1rem;
   color: #fff;
   padding: 10px 20px 10px 15px;
 }
 
 .vault__value td {
-  padding: 15px 5px 15px 0;
+  padding: 7px 5px 7px 0;
 }
 
 .vault__stat {
@@ -380,9 +377,9 @@ h1 {
 }
 
 .vault__stat th {
-  font-weight: bold;
+  font-weight: 700;
   color: #505e75;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .vault__stat-deposit {
@@ -582,7 +579,7 @@ h1 {
 .dark-mode .vault__amount__title {
   color: #808080;
 }
-.vault__stat th {
+.dark-mode .vault__stat th {
   color: #808080;
 }
 .dark-mode .vault__value {
@@ -638,10 +635,10 @@ h1 {
     width: calc(50%);
   }
   .dep__inner h1 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .dep__value {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
   .finance__title {
     margin-top: 10px;
@@ -654,12 +651,6 @@ h1 {
   }
   .vault__amount__title {
     font-size: 1rem;
-  }
-  .vault__amount__dollars {
-    font-size: 0.9rem;
-  }
-  .vault__amount__coins {
-    font-size: 0.8rem;
   }
 }
 
