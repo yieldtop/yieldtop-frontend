@@ -292,7 +292,7 @@ h1 {
 .finance__title {
   display: flex;
   align-items: center;
-  margin: 30px 10px 10px 10px;
+  margin: 30px 10px 5px 10px;
   border-bottom: 1px solid #252A31;
 }
 
@@ -381,9 +381,9 @@ h1 {
 .vault__stat th {
   font-weight: 700;
   color: #505e75;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
 }
-
 .vault__stat-deposit {
 
 }
@@ -392,6 +392,7 @@ h1 {
 .vault__stat-apy td {
   color: #FFAD17;
   font-weight: 700;
+  font-size: 1rem;
 }
 .vault__stat-total {
   border-top: 1px solid #343a44;
