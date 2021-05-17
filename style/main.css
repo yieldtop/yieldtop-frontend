@@ -632,12 +632,9 @@ h1 {
 .dark-mode .vault__value {
   color: #000002;
 }
-.dark-mode .wallet__balance {
-  background-color: #FFFFFF;
+.dark-mode .wallet__table {
+  background-color: #ffffff;
   color: #000002;
-}
-.dark-mode .wallet__balance th {
-  border-bottom: 1px solid #dadada;
 }
 .dark-mode .footer {
   border-top: 1px solid #dadada;
