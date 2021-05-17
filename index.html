@@ -388,313 +388,428 @@
 
     </div>
   </div>
-  <!-- Wallet balance -->
+
+  <!-- Wallet -->
   <div class="tab-content__item js-tab-content" data-tab="2">
     <div class="container">
       <div class="wallet">
-        <table class="wallet__balance">
-          <th align="left">
-            <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            Token
-          </th>
-          <th>
-            <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            Price
-          </th>
-          <th>
-            <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            Balance
-            <br>
-            <span style="font-size: smaller; font-weight: 300; color: grey;">Amount</span>
-          </th>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/CAKE.png" alt="logo">
+        <table class="wallet__table">
+          <thead>
+            <tr>
+              <th class="thead-cell">
+                <div class="thead-cell__item">
+                  <div class="thead-cell__img">
+                    <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </div>
+                  <div>
+                    Token
+                  </div>
                 </div>
-                <div class="token__name">
-                  CAKE
+              </th>
+              <th class="thead-cell">
+                <div class="thead-cell__item-right">
+                  <div class="thead-cell__img">
+                    <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </div>
+                  <div>Price</div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $25
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$2500</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">100</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/DOT.png" alt="logo">
+              </th>
+              <th class="thead-cell">
+                <div class="thead-cell__item-right">
+                  <div class="thead-cell__img">
+                    <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </div>
+                  <div>
+                    <span>Holdings</span>
+                  </div>
                 </div>
-                <div class="token__name">
-                  DOT
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="tbody-cell">
+                <div class="tbody-cell__token">
+                  <div>
+                    <img src="img/tokens/BIFI.png" alt="logo">
+                  </div>
+                  <div class="tbody-cell__item">
+                    <div class="tbody-cell__token-ticker">
+                      <span>BIFI</span>
+                    </div>
+                    <div class="tbody-cell__token-name">
+                      <span>beefy.finance</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $40
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$2500</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">62.5</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/BIFI.png" alt="logo">
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__token-prise">
+                    <span>$1,209.79</span>
+                  </div>
+                  <div>
+                  <div class="tbody-cell__prise-change down">
+                    <span class="">-7.36 %</span>
+                  </div>
                 </div>
-                <div class="token__name">
-                  BIFI
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__hold-dollar">
+                    <span>$120,979.00</span>
+                  </div>
+                  <div class="tbody-cell__hold-token">
+                    <span>100</span>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $9865
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$14797.5</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/BNB.png" alt="logo">
+              </td>
+            </tr>
+            <tr>
+              <td class="tbody-cell">
+                <div class="tbody-cell__token">
+                  <div>
+                    <img src="img/tokens/BNB.png" alt="logo">
+                  </div>
+                  <div class="tbody-cell__item">
+                    <div class="tbody-cell__token-ticker">
+                      <span>BNB</span>
+                    </div>
+                    <div class="tbody-cell__token-name">
+                      <span>Binance</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="token__name">
-                  BNB
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__token-prise">
+                    <span>$526.69</span>
+                  </div>
+                  <div>
+                  <div class="tbody-cell__prise-change down">
+                    <span class="">-10.78 %</span>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $9865
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$14797.5</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/BUNNY.png" alt="logo">
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__hold-dollar">
+                    <span>$52,669.00</span>
+                  </div>
+                  <div class="tbody-cell__hold-token">
+                    <span>100</span>
+                  </div>
                 </div>
-                <div class="token__name">
-                  BUNNY
+              </td>
+            </tr>
+            <tr>
+              <td class="tbody-cell">
+                <div class="tbody-cell__token">
+                  <div>
+                    <img src="img/tokens/DOT.png" alt="logo">
+                  </div>
+                  <div class="tbody-cell__item">
+                    <div class="tbody-cell__token-ticker">
+                      <span>DOT</span>
+                    </div>
+                    <div class="tbody-cell__token-name">
+                      <span>Polkadot Token</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $9865
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$14797.5</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/BUSD.png" alt="logo">
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__token-prise">
+                    <span>$39.45</span>
+                  </div>
+                  <div>
+                  <div class="tbody-cell__prise-change down">
+                    <span class="">-11.43 %</span>
+                  </div>
                 </div>
-                <div class="token__name">
-                  BUSD
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__hold-dollar">
+                    <span>$39,450.00</span>
+                  </div>
+                  <div class="tbody-cell__hold-token">
+                    <span>1000</span>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $9865
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$14797.5</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/TWT.png" alt="logo">
+              </td>
+            </tr>
+            <tr>
+              <td class="tbody-cell">
+                <div class="tbody-cell__token">
+                  <div>
+                    <img src="img/tokens/BUSD.png" alt="logo">
+                  </div>
+                  <div class="tbody-cell__item">
+                    <div class="tbody-cell__token-ticker">
+                      <span>BUSD</span>
+                    </div>
+                    <div class="tbody-cell__token-name">
+                      <span>BUSD Token</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="token__name">
-                  TWT
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__token-prise">
+                    <span>$1.00</span>
+                  </div>
+                  <div>
+                  <div class="tbody-cell__prise-change up">
+                    <span class="">+0.01 %</span>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $9865
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$14797.5</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/1INCH.png" alt="logo">
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__hold-dollar">
+                    <span>$35,000.00</span>
+                  </div>
+                  <div class="tbody-cell__hold-token">
+                    <span>35000</span>
+                  </div>
                 </div>
-                <div class="token__name">
-                  1INCH
+              </td>
+            </tr>
+            <tr>
+              <td class="tbody-cell">
+                <div class="tbody-cell__token">
+                  <div>
+                    <img src="img/tokens/UNI.png" alt="logo">
+                  </div>
+                  <div class="tbody-cell__item">
+                    <div class="tbody-cell__token-ticker">
+                      <span>UNI</span>
+                    </div>
+                    <div class="tbody-cell__token-name">
+                      <span>Uniswap</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $9865
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$14797.5</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/SOL.png" alt="logo">
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__token-prise">
+                    <span>$34.88</span>
+                  </div>
+                  <div>
+                  <div class="tbody-cell__prise-change down">
+                    <span class="">-7.71 %</span>
+                  </div>
                 </div>
-                <div class="token__name">
-                  SOL
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__hold-dollar">
+                    <span>$34,880.00</span>
+                  </div>
+                  <div class="tbody-cell__hold-token">
+                    <span>1000</span>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $9865
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$14797.5</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/xBLZD.png" alt="logo">
+              </td>
+            </tr>
+            <tr>
+              <td class="tbody-cell">
+                <div class="tbody-cell__token">
+                  <div>
+                    <img src="img/tokens/CAKE.png" alt="logo">
+                  </div>
+                  <div class="tbody-cell__item">
+                    <div class="tbody-cell__token-ticker">
+                      <span>CAKE</span>
+                    </div>
+                    <div class="tbody-cell__token-name">
+                      <span>PancakeSwap Token</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="token__name">
-                  xBLZD
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__token-prise">
+                    <span>$25.00</span>
+                  </div>
+                  <div>
+                  <div class="tbody-cell__prise-change down">
+                    <span class="">-13.47 %</span>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $9865
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$14797.5</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/UNI.png" alt="logo">
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__hold-dollar">
+                    <span>$25,000.00</span>
+                  </div>
+                  <div class="tbody-cell__hold-token">
+                    <span>1000</span>
+                  </div>
                 </div>
-                <div class="token__name">
-                  UNI
+              </td>
+            </tr>
+            <tr>
+              <td class="tbody-cell">
+                <div class="tbody-cell__token">
+                  <div>
+                    <img src="img/tokens/TWT.png" alt="logo">
+                  </div>
+                  <div class="tbody-cell__item">
+                    <div class="tbody-cell__token-ticker">
+                      <span>TWT</span>
+                    </div>
+                    <div class="tbody-cell__token-name">
+                      <span>Trust Wallet</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $9865
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$14797.5</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/ETH.png" alt="logo">
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__token-prise">
+                    <span>$0.75</span>
+                  </div>
+                  <div>
+                  <div class="tbody-cell__prise-change down">
+                    <span class="">-7.32 %</span>
+                  </div>
                 </div>
-                <div class="token__name">
-                  ETH
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__hold-dollar">
+                    <span>$7,500.00</span>
+                  </div>
+                  <div class="tbody-cell__hold-token">
+                    <span>10000</span>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $9865
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$14797.5</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">1.5</span>
-              </div>
-            </td>
-          </tr>
+              </td>
+            </tr>
+            <tr>
+              <td class="tbody-cell">
+                <div class="tbody-cell__token">
+                  <div>
+                    <img src="img/tokens/ETH.png" alt="logo">
+                  </div>
+                  <div class="tbody-cell__item">
+                    <div class="tbody-cell__token-ticker">
+                      <span>ETH</span>
+                    </div>
+                    <div class="tbody-cell__token-name">
+                      <span>Ethereum Token</span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__token-prise">
+                    <span>$3,422.12</span>
+                  </div>
+                  <div>
+                  <div class="tbody-cell__prise-change down">
+                    <span class="">-7.34 %</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__hold-dollar">
+                    <span>$3,422.12</span>
+                  </div>
+                  <div class="tbody-cell__hold-token">
+                    <span>1</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="tbody-cell">
+                <div class="tbody-cell__token">
+                  <div>
+                    <img src="img/tokens/BUNNY.png" alt="logo">
+                  </div>
+                  <div class="tbody-cell__item">
+                    <div class="tbody-cell__token-ticker">
+                      <span>BUNNY</span>
+                    </div>
+                    <div class="tbody-cell__token-name">
+                      <span>Bunny Token</span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__token-prise">
+                    <span>$243.31</span>
+                  </div>
+                  <div>
+                  <div class="tbody-cell__prise-change down">
+                    <span class="">-13.42 %</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__hold-dollar">
+                    <span>$2,433.10</span>
+                  </div>
+                  <div class="tbody-cell__hold-token">
+                    <span>10</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="tbody-cell">
+                <div class="tbody-cell__token">
+                  <div>
+                    <img src="img/tokens/1INCH.png" alt="logo">
+                  </div>
+                  <div class="tbody-cell__item">
+                    <div class="tbody-cell__token-ticker">
+                      <span>1INCH</span>
+                    </div>
+                    <div class="tbody-cell__token-name">
+                      <span>1INCH Token</span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__token-prise">
+                    <span>$5.03</span>
+                  </div>
+                  <div>
+                  <div class="tbody-cell__prise-change down">
+                    <span class="">-9.6 %</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tbody-cell">
+                <div class="tbody-cell__item">
+                  <div class="tbody-cell__hold-dollar">
+                    <span>$503.00</span>
+                  </div>
+                  <div class="tbody-cell__hold-token">
+                    <span>100</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
         </table>
       </div>
     </div>
