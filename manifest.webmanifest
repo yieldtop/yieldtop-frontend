@@ -1,0 +1,11 @@
+{
+  "name": "YieldPro",
+  "short_name": "YieldPro",
+  "description": "YieldPro",
+  "icons": [],
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "orientation": "portrait-primary",
+  "theme_color": "#20242a",
+  "background_color": "#20242a"
+}

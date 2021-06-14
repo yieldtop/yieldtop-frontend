@@ -2,910 +2,1066 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
   <title>YieldPro</title>
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <meta property="og:title" content="Smart & Beautiful DeFi Dashboard - YieldPro" />
-  <meta property="og:description" content="Manage your DeFi portfolio on the Binance Smart Chain" />
-  <meta property="og:image" content="https://yield.galyshev.pro/img/og_card.png" />
-  <meta name="twitter:image" content="https://yield.galyshev.pro/img/og_card.png" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:title" content="Smart & Beautiful DeFi Dashboard - YieldPro"/>
+  <meta property="og:description"
+        content="Manage your DeFi portfolio on the Binance Smart Chain"/>
+  <meta property="og:image" content="https://yield.galyshev.pro/img/og_card.png"/>
+  <meta name="twitter:image" content="https://yield.galyshev.pro/img/og_card.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style/main.css?new">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style/main2.css?new">
+  <link rel="manifest" href="/manifest.webmanifest">
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <ul class="header__tabs">
-          <li class="header__tabs-item js-tab-trigger active" data-tab="1"><a href="#">Dashboard</a></li>
-          <li class="header__tabs-item js-tab-trigger" data-tab="2"><a href="#">Wallet</a></li>
-          <li class="header__tabs-item js-tab-trigger" data-tab="3"><a href="#">Rates</a></li>
-        </ul>
+<noscript>You need to enable JavaScript to run this app.</noscript>
 
-        <input type="text" class="wallet-input" placeholder="Input wallet address...">
-
-        <div class="header__burger">
-          <span></span>
-        </div>
-
-        <div class="header__burger-menu">
-          <div class="header__logo">
-            <a href="index.html">
-              <img src="img/nav/logo.png" alt="Logo">
-            </a>
-          </div>
-          <ul class="header__list">
-            <li>
-              <img src="img/nav/theme.svg" alt="ico">
-              <a href="#" id="theme" class="header__link">Theme</a>
-            </li>
-            <li>
-              <a href="#" class="header__link">#  ##</a>
-            </li>
-            <li>
-              <a href="#" class="header__link">#  ##</a>
-            </li>
-            <li>
-              <a href="#" class="header__link">#  ##</a>
-            </li>
-            <li>
-              <a href="#" class="header__link">#  ##</a>
-            </li>
-          </ul>
-          <div class="copyright__text">
-            <div>Copiright &copy; 2021 TopCap. All Rights Reserved</div>
-            <div>Made with &#10084; by Ururus</div>
-          </div>
-        </div> <!-- /header__burger-menu -->
-      </div> <!-- /header__inner -->
-    </div> <!-- /container -->
-  </header> <!-- /header -->
-
-  <!-- Dashboard -->
-  <div class="tab-content__item js-tab-content active" data-tab="1">
-    <div class="container">
-      <div class="dep">
-        <div class="dep__inner">
-          <h1>Net Worth</h1>
-          <span class="dep__value">$146,060.30</span>
-        </div>
-        <div class="dep__inner">
-          <h1>Total Deposit</h1>
-          <span class="dep__value">$139,411.75</span>
-        </div>
-        <div class="dep__inner">
-          <h1>Total Yield</h1>
-          <span class="dep__value">$6,500.70</span>
-        </div>
+<!-- Modal Wallet Connect -->
+<div id="wrapper-modal">
+  <div id="overlay"></div>
+  <div id="modal">
+    <div class="modal-title">
+      <div class="modal-title__inner">
+        Connect to a wallet
       </div>
+      <button id="btn-close">
+          <span class="btn-close-icon material-icons">
+            close
+          </span>
+      </button>
+    </div>
+    <div class="modal-content">
+      <button class="wallet-connect-btn" id="wallet-connect-metamask">
+        <div>MetaMask</div>
+        <img src="/img/wallets/metamask.svg" alt="">
+      </button>
+      <button class="wallet-connect-btn" id="wallet-connect-trustwallet">
+        <div>Trust Wallet</div>
+        <img src="/img/wallets/trustwallet.svg" alt="">
+      </button>
+      <button class="wallet-connect-btn" id="wallet-connect-walletconnect">
+        <div>Wallet Connect</div>
+        <img src="/img/wallets/walletconnect.svg" alt="">
+      </button>
+      <button class="wallet-connect-btn" id="wallet-connect-binancechainwallet">
+        <div>Binance Chain Wallet</div>
+        <img src="/img/wallets/binancechainwallet.svg" alt="">
+      </button>
+    </div>
+    <div class="modal-footer">
+      <a target="_blank" rel="noreferrer noopener"
+         href="https://docs.pancakeswap.finance/guides/faq#how-do-i-set-up-my-wallet-on-binance-smart-chain"
+         class="modal-footer__link">
+          <span class="material-icons modal-footer__icon">
+            help_outline
+          </span>
+        Learn how to connect
+      </a>
+    </div>
+  </div> <!-- /modal -->
+</div> <!-- /wrapper-modal -->
+
+<!-- Header -->
+<header class="header">
+  <div class="header__inner">
+
+    <div class="header__burger">
+      <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="60"
+           onclick="this.classList.toggle('active')">
+        <path class="line top"
+              d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"/>
+        <path class="line middle" d="m 70,50 h -40"/>
+        <path class="line bottom"
+              d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"/>
+      </svg>
     </div>
 
-    <!-- Vaults -->
-    <div class="container">
-      <div class="finance">
-        <div class="finance__title">
-          <img src="img/platforms/beefyFinance.png" alt="logo">
-          <div class="platform">
-            <span class="platform__title">beefy.finance</span>
-            <span class="platform__chain">Binance Smart Chain</span>
-          </div>
-        </div>
-
-        <div class="finance__vaults">
-          <div class="vaults__wrapper">
-            <div class="vault">
-              <div class="vault__title">
-                <div class="vault__title-left">
-                  <img src="img/tokens/xBLZD.png" alt="logo">
-                  <div class="vault__amount">
-                    <span class="vault__amount__title">Moo Blizzard BLZD</span>
-                  </div>
-                </div>
-                <div class="vault__title-apy">
-                  <span>11.43k %</span>
-                </div>
-              </div>
-
-              <div class="vault__value">
-                <table class="vault__stat">
-                  <tr class="vault__stat-deposit">
-                    <th>Deposit:</th>
-                    <td><span>10.01</span> BLZD</td>
-                    <td>$305.28</td>
-                  </tr>
-                  <tr class="vault__stat-yield">
-                    <th>Yield:</th>
-                    <td><span>0.1587</span> BLZD</td>
-                    <td><span>$4.82</span></td>
-                  </tr>
-                  <tr class="vault__stat-total">
-                    <th>Total:</th>
-                    <td><span>10.16</span> BLZD</td>
-                    <td><span>$61k</span></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div class="vaults__wrapper">
-            <div class="vault">
-              <div class="vault__title">
-                <div class="vault__title-left">
-                  <img src="img/tokens/BIFI.png" alt="logo">
-                  <div class="vault__amount">
-                    <span class="vault__amount__title">BIFI Maxi</span>
-                  </div>
-                </div>
-                <div class="vault__title-apy">
-                  <span>19.20 %</span>
-                </div>
-              </div>
-
-              <div class="vault__value">
-                <table class="vault__stat">
-                  <tr class="vault__stat-deposit">
-                    <th>Deposit:</th>
-                    <td><span>100.14</span> BIFI</td>
-                    <td><span>$30k</span></td>
-                  </tr>
-                  <tr class="vault__stat-yield">
-                    <th>Yield:</th>
-                    <td><span>0.0085</span> BIFI</td>
-                    <td><span>$40.82</span></td>
-                  </tr>
-                  <tr class="vault__stat-total">
-                    <th>Total:</th>
-                    <td><span>100.14</span> BIFI</td>
-                    <td><span>$30.52k</span></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div class="vaults__wrapper">
-            <div class="vault">
-              <div class="vault__title">
-                <div class="vault__title-left">
-                  <img src="img/tokens/1INCH.png" alt="logo">
-                  <div class="vault__amount">
-                    <span class="vault__amount__title">Moo 1INCH 1INCH</span>
-                  </div>
-                </div>
-                <div class="vault__title-apy">
-                  <span>145 %</span>
-                </div>
-              </div>
-
-              <div class="vault__value">
-                <table class="vault__stat">
-                  <tr class="vault__stat-deposit">
-                    <th>Deposit:</th>
-                    <td><span>10.01</span> 1INCH</td>
-                    <td><span>$305.28</span></td>
-                  </tr>
-                  <tr class="vault__stat-yield">
-                    <th>Yield:</th>
-                    <td><span>0.1587</span> 1INCH</td>
-                    <td><span>$4.82</span></td>
-                  </tr>
-                  <tr class="vault__stat-total">
-                    <th>Total:</th>
-                    <td><span>10.16</span> 1INCH</td>
-                    <td><span>$77.09k</span></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div class="vaults__wrapper">
-            <div class="vault">
-              <div class="vault__title">
-                <div class="vault__title-left">
-                  <img src="img/tokens/beltETH.png" alt="logo">
-                  <div class="vault__amount">
-                    <span class="vault__amount__title">Belt ETH</span>
-                  </div>
-                </div>
-                <div class="vault__title-apy">
-                  <span>17.41 %</span>
-                </div>
-              </div>
-
-              <div class="vault__value">
-                <table class="vault__stat">
-                  <tr class="vault__stat-deposit">
-                    <th>Deposit:</th>
-                    <td><span>1.97</span> beltETH</td>
-                    <td><span>$7.56k</span></td>
-                  </tr>
-                  <tr class="vault__stat-yield">
-                    <th>Yield:</th>
-                    <td><span>0.0054</span> beltETH</td>
-                    <td><span>$20.55</span></td>
-                  </tr>
-                  <tr class="vault__stat-total">
-                    <th>Total:</th>
-                    <td><span>1.98</span> beltETH</td>
-                    <td><span>$7.58k</span></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div class="vaults__wrapper">
-            <div class="vault">
-              <div class="vault__title">
-                <div class="vault__title-left">
-                  <img src="img/tokens/belt4belt.png" alt="logo">
-                  <div class="vault__amount">
-                    <span class="vault__amount__title">Belt 4BELT</span>
-                  </div>
-                </div>
-                <div class="vault__title-apy">
-                  <span>38.87 %</span>
-                </div>
-              </div>
-
-              <div class="vault__value">
-                <table class="vault__stat">
-                  <tr class="vault__stat-deposit">
-                    <th>Deposit:</th>
-                    <td><span>12.25k</span> 4BeltLP</td>
-                    <td><span>$12.43k</span></td>
-                  </tr>
-                  <tr class="vault__stat-yield">
-                    <th>Yield:</th>
-                    <td><span>189.21</span> 4BeltLP</td>
-                    <td><span>$191.97</span></td>
-                  </tr>
-                  <tr class="vault__stat-total">
-                    <th>Total:</th>
-                    <td><span>12.44k</span> 4BeltLP</td>
-                    <td><span>$12.62k</span></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-
-        </div>
+    <div class="header__burger-menu">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="img/nav/logo.png" alt="Logo">
+        </a>
       </div>
-
-      <div class="finance">
-        <div class="finance__title">
-          <img src="img/platforms/pancakeBunny.png" alt="logo">
-          <div class="platform">
-            <span class="platform__title">PancakeBunny</span>
-            <span class="platform__chain">Binance Smart Chain</span>
-          </div>
-        </div>
-
-        <div class="finance__vaults">
-          <div class="vaults__wrapper">
-            <div class="vault">
-              <div class="vault__title">
-                <div class="vault__title-left">
-                  <img src="img/tokens/CAKE.png" alt="logo">
-                  <div class="vault__amount">
-                    <span class="vault__amount__title">Cake Vault</span>
-                  </div>
-                </div>
-                <div class="vault__title-apy">
-                  <span>302 %</span>
-                </div>
+      <ul class="header__list">
+        <li>
+          <a href="#" class="header__link js-tab-trigger active" data-tab="1">
+              <span class="header__link-icon material-icons">
+                space_dashboard
+                </span>
+            <div>Dashboard</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="header__link js-tab-trigger" data-tab="2">
+            <span class="header__link-icon material-icons">account_balance_wallet</span>
+            <div>Wallet</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="header__link js-tab-trigger" data-tab="3">
+              <span class="header__link-icon material-icons">
+                assessment
+                </span>
+            <div>Rates</div>
+          </a>
+        </li>
+        <li>
+          <div class="acor-container">
+            <input type="checkbox" name="chacor" id="chacor1" checked="checked"/>
+            <label for="chacor1">
+              <div class="header__link">
+                  <span class="header__link-icon material-icons">
+                    settings_applications
+                    </span>
+                <div>Settings</div>
               </div>
-
-              <div class="vault__value">
-                <table class="vault__stat">
-                  <tr class="vault__stat-deposit">
-                    <th>Deposit:</th>
-                    <td><span>150.89</span> Cake</td>
-                   <td><span>$9.34k</span></td>
-                  </tr>
-                  <tr class="vault__stat-yield">
-                    <th>Yield:</th>
-                    <td><span>15.872</span> Cake</td>
-                    <td><span>$9k</span></td>
-                  </tr>
-                  <tr class="vault__stat-yield">
-                    <th></th>
-                    <td><span>1.45</span> Bunny</td>
-                    <td><span>$900.82</span></td>
-                  </tr>
-                  <tr class="vault__stat-total">
-                    <th>Total:</th>
-                    <td><span>166.66</span> Cake</td>
-                    <td><span>$34.5k</span></td>
-                  </tr>
-                </table>
-              </div>
+            </label>
+            <div class="acor-body">
+              <a href="#" class="acor-body-inner themetoggle">
+                <span class="acor-body-icon material-icons">brightness_4</span>
+                Theme
+              </a>
+              <a href="#" class="acor-body-inner">
+                <span class="acor-body-icon material-icons">language</span>
+                Language
+              </a>
+              <a href="#" class="acor-body-inner">
+                <span class="acor-body-icon material-icons">monetization_on</span>
+                Currency
+              </a>
             </div>
           </div>
-        </div>
+        </li>
+      </ul>
+      <div class="copyright__text">
+        <div>Copyright &copy; 2021 TopCap. All Rights Reserved</div>
+        <div>Made with &#10084; by Ururus</div>
       </div>
+    </div> <!-- /header__burger-menu -->
+    <div class="burger-overlay"></div>
 
-      <div class="finance">
-        <div class="finance__title">
-          <img src="img/platforms/blizzard.png" alt="logo">
-          <div class="platform">
-            <span class="platform__title">BLIZZARD.MONEY</span>
-            <span class="platform__chain">Binance Smart Chain</span>
-          </div>
-        </div>
+    <input type="text" class="wallet-input" placeholder="Input wallet address...">
 
-        <div class="finance__vaults">
-          <div class="vaults__wrapper">
-            <div class="vault">
-              <div class="vault__title">
-                <div class="vault__title-left">
-                  <img src="img/tokens/xBLZD-BUSDBNB-LP.png" alt="logo">
-                  <div class="vault__amount">
-                    <span class="vault__amount__title">xBLZD-BUSD/BNB Staking</span>
-                  </div>
-                </div>
-                <div class="vault__title-apy">
-                  <span>99k %</span>
-                </div>
-              </div>
+    <button id="btn-connect">Connect</button>
 
-              <div class="vault__value">
-                <table class="vault__stat">
-                  <tr class="vault__stat-deposit">
-                    <th>Deposit:</th>
-                    <td><span>150.89</span> xBLZD</td>
-                   <td><span>$3.1k</span></td>
-                  </tr>
-                  <tr class="vault__stat-yield">
-                    <th>Pending:</th>
-                    <td><span>0.2696</span> LP</td>
-                    <td><span>$3.1k</span></td>
-                  </tr>
-                  <tr class="vault__stat-yield">
-                    <th>Harvest:</th>
-                    <td><span>0.02322</span> LP</td>
-                    <td><span>$900.82</span></td>
-                  </tr>
-                  <tr class="vault__stat-total">
-                    <th>Total:</th>
-                    <td></td>
-                    <td><span>$34.7k</span></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
+  </div> <!-- /header__inner -->
+</header> <!-- /header -->
+
+<!-- Dashboard -->
+<div class="tab-content__item js-tab-content active" data-tab="1">
+  <div class="container">
+    <div class="dep">
+      <div class="dep__inner">
+        <h1>Net Worth</h1>
+        <span class="dep__value">$146,060.30</span>
       </div>
-
-    </div>
-  </div>
-
-  <!-- Wallet -->
-  <div class="tab-content__item js-tab-content" data-tab="2">
-    <div class="container">
-      <div class="wallet">
-        <table class="wallet__table">
-          <thead>
-            <tr>
-              <th class="thead-cell">
-                <div class="thead-cell__item">
-                  <div class="thead-cell__img">
-                    <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                  </div>
-                  <div>
-                    Token
-                  </div>
-                </div>
-              </th>
-              <th class="thead-cell">
-                <div class="thead-cell__item-right">
-                  <div class="thead-cell__img">
-                    <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                  </div>
-                  <div>Price</div>
-                </div>
-              </th>
-              <th class="thead-cell">
-                <div class="thead-cell__item-right">
-                  <div class="thead-cell__img">
-                    <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                  </div>
-                  <div>
-                    <span>Holdings</span>
-                  </div>
-                </div>
-              </th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td class="tbody-cell">
-                <div class="tbody-cell__token">
-                  <div>
-                    <img src="img/tokens/BIFI.png" alt="logo">
-                  </div>
-                  <div class="tbody-cell__item">
-                    <div class="tbody-cell__token-ticker">
-                      <span>BIFI</span>
-                    </div>
-                    <div class="tbody-cell__token-name">
-                      <span>beefy.finance</span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__token-prise">
-                    <span>$1,209.79</span>
-                  </div>
-                  <div>
-                  <div class="tbody-cell__prise-change down">
-                    <span class="">-7.36 %</span>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__hold-dollar">
-                    <span>$120,979.00</span>
-                  </div>
-                  <div class="tbody-cell__hold-token">
-                    <span>100</span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="tbody-cell">
-                <div class="tbody-cell__token">
-                  <div>
-                    <img src="img/tokens/BNB.png" alt="logo">
-                  </div>
-                  <div class="tbody-cell__item">
-                    <div class="tbody-cell__token-ticker">
-                      <span>BNB</span>
-                    </div>
-                    <div class="tbody-cell__token-name">
-                      <span>Binance</span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__token-prise">
-                    <span>$526.69</span>
-                  </div>
-                  <div>
-                  <div class="tbody-cell__prise-change down">
-                    <span class="">-10.78 %</span>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__hold-dollar">
-                    <span>$52,669.00</span>
-                  </div>
-                  <div class="tbody-cell__hold-token">
-                    <span>100</span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="tbody-cell">
-                <div class="tbody-cell__token">
-                  <div>
-                    <img src="img/tokens/DOT.png" alt="logo">
-                  </div>
-                  <div class="tbody-cell__item">
-                    <div class="tbody-cell__token-ticker">
-                      <span>DOT</span>
-                    </div>
-                    <div class="tbody-cell__token-name">
-                      <span>Polkadot Token</span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__token-prise">
-                    <span>$39.45</span>
-                  </div>
-                  <div>
-                  <div class="tbody-cell__prise-change down">
-                    <span class="">-11.43 %</span>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__hold-dollar">
-                    <span>$39,450.00</span>
-                  </div>
-                  <div class="tbody-cell__hold-token">
-                    <span>1000</span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="tbody-cell">
-                <div class="tbody-cell__token">
-                  <div>
-                    <img src="img/tokens/BUSD.png" alt="logo">
-                  </div>
-                  <div class="tbody-cell__item">
-                    <div class="tbody-cell__token-ticker">
-                      <span>BUSD</span>
-                    </div>
-                    <div class="tbody-cell__token-name">
-                      <span>BUSD Token</span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__token-prise">
-                    <span>$1.00</span>
-                  </div>
-                  <div>
-                  <div class="tbody-cell__prise-change up">
-                    <span class="">+0.01 %</span>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__hold-dollar">
-                    <span>$35,000.00</span>
-                  </div>
-                  <div class="tbody-cell__hold-token">
-                    <span>35000</span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="tbody-cell">
-                <div class="tbody-cell__token">
-                  <div>
-                    <img src="img/tokens/UNI.png" alt="logo">
-                  </div>
-                  <div class="tbody-cell__item">
-                    <div class="tbody-cell__token-ticker">
-                      <span>UNI</span>
-                    </div>
-                    <div class="tbody-cell__token-name">
-                      <span>Uniswap</span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__token-prise">
-                    <span>$34.88</span>
-                  </div>
-                  <div>
-                  <div class="tbody-cell__prise-change down">
-                    <span class="">-7.71 %</span>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__hold-dollar">
-                    <span>$34,880.00</span>
-                  </div>
-                  <div class="tbody-cell__hold-token">
-                    <span>1000</span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="tbody-cell">
-                <div class="tbody-cell__token">
-                  <div>
-                    <img src="img/tokens/CAKE.png" alt="logo">
-                  </div>
-                  <div class="tbody-cell__item">
-                    <div class="tbody-cell__token-ticker">
-                      <span>CAKE</span>
-                    </div>
-                    <div class="tbody-cell__token-name">
-                      <span>PancakeSwap Token</span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__token-prise">
-                    <span>$25.00</span>
-                  </div>
-                  <div>
-                  <div class="tbody-cell__prise-change down">
-                    <span class="">-13.47 %</span>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__hold-dollar">
-                    <span>$25,000.00</span>
-                  </div>
-                  <div class="tbody-cell__hold-token">
-                    <span>1000</span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="tbody-cell">
-                <div class="tbody-cell__token">
-                  <div>
-                    <img src="img/tokens/TWT.png" alt="logo">
-                  </div>
-                  <div class="tbody-cell__item">
-                    <div class="tbody-cell__token-ticker">
-                      <span>TWT</span>
-                    </div>
-                    <div class="tbody-cell__token-name">
-                      <span>Trust Wallet</span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__token-prise">
-                    <span>$0.75</span>
-                  </div>
-                  <div>
-                  <div class="tbody-cell__prise-change down">
-                    <span class="">-7.32 %</span>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__hold-dollar">
-                    <span>$7,500.00</span>
-                  </div>
-                  <div class="tbody-cell__hold-token">
-                    <span>10000</span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="tbody-cell">
-                <div class="tbody-cell__token">
-                  <div>
-                    <img src="img/tokens/ETH.png" alt="logo">
-                  </div>
-                  <div class="tbody-cell__item">
-                    <div class="tbody-cell__token-ticker">
-                      <span>ETH</span>
-                    </div>
-                    <div class="tbody-cell__token-name">
-                      <span>Ethereum Token</span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__token-prise">
-                    <span>$3,422.12</span>
-                  </div>
-                  <div>
-                  <div class="tbody-cell__prise-change down">
-                    <span class="">-7.34 %</span>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__hold-dollar">
-                    <span>$3,422.12</span>
-                  </div>
-                  <div class="tbody-cell__hold-token">
-                    <span>1</span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="tbody-cell">
-                <div class="tbody-cell__token">
-                  <div>
-                    <img src="img/tokens/BUNNY.png" alt="logo">
-                  </div>
-                  <div class="tbody-cell__item">
-                    <div class="tbody-cell__token-ticker">
-                      <span>BUNNY</span>
-                    </div>
-                    <div class="tbody-cell__token-name">
-                      <span>Bunny Token</span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__token-prise">
-                    <span>$243.31</span>
-                  </div>
-                  <div>
-                  <div class="tbody-cell__prise-change down">
-                    <span class="">-13.42 %</span>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__hold-dollar">
-                    <span>$2,433.10</span>
-                  </div>
-                  <div class="tbody-cell__hold-token">
-                    <span>10</span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="tbody-cell">
-                <div class="tbody-cell__token">
-                  <div>
-                    <img src="img/tokens/1INCH.png" alt="logo">
-                  </div>
-                  <div class="tbody-cell__item">
-                    <div class="tbody-cell__token-ticker">
-                      <span>1INCH</span>
-                    </div>
-                    <div class="tbody-cell__token-name">
-                      <span>1INCH Token</span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__token-prise">
-                    <span>$5.03</span>
-                  </div>
-                  <div>
-                  <div class="tbody-cell__prise-change down">
-                    <span class="">-9.6 %</span>
-                  </div>
-                </div>
-              </td>
-              <td class="tbody-cell">
-                <div class="tbody-cell__item">
-                  <div class="tbody-cell__hold-dollar">
-                    <span>$503.00</span>
-                  </div>
-                  <div class="tbody-cell__hold-token">
-                    <span>100</span>
-                  </div>
-                </div>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
+      <div class="dep__inner">
+        <h1>Total Deposit</h1>
+        <span class="dep__value">$139,411.75</span>
+      </div>
+      <div class="dep__inner">
+        <h1>Total Yield</h1>
+        <span class="dep__value">$6,500.70</span>
       </div>
     </div>
   </div>
 
-  <!-- Exchange Rates -->
-  <div class="tab-content__item js-tab-content" data-tab="3">
-    <div class="container">
-      <div class="wallet">
-        <table class="wallet__balance">
-          <th align="left">
-            <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            Token
-          </th>
-          <th>
-            <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            Price
-          </th>
-          <th>
-            <svg width="10" height="10" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5" stroke="#808080" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            Balance
-            <br>
-            <span style="font-size: smaller; font-weight: 300; color: grey;">Amount</span>
-          </th>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/CAKE.png" alt="logo">
-                </div>
-                <div class="token__name">
-                  CAKE
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $25
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$2500</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">100</span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="token">
-                <div class="token__logo">
-                  <img src="img/tokens/DOT.png" alt="logo">
-                </div>
-                <div class="token__name">
-                  DOT
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="token-price">
-                $40
-              </div>
-            </td>
-            <td>
-              <div class="token-amount">
-                <span>$2500</span>
-                <br>
-                <span style="font-size: smaller; font-weight: 300; color: grey;">62.5</span>
-              </div>
-            </td>
-          </tr>
-
-        </table>
+  <!-- Vaults -->
+  <div class="container">
+    <div class="finance">
+      <div class="finance__title">
+        <img src="img/platforms/beefyFinance.png" alt="logo">
+        <div class="platform">
+          <span class="platform__title">beefy.finance</span>
+          <span class="platform__chain">Binance Smart Chain</span>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__block">
-          <div class="footer__social">
-            <a target="_blank" href="#" class="footer__social-link">Telegram</a>
-            <a target="_blank" href="#" class="footer__social-link">Twitter</a>
-            <a target="_blank" href="#" class="footer__social-link">Medium</a>
-            <a target="_blank" href="#" class="footer__social-link">GitHub</a>
+      <div class="finance__vaults">
+        <div class="vaults__wrapper">
+          <div class="vault">
+            <div class="vault__title">
+              <div class="vault__title-left">
+                <img src="img/tokens/xBLZD.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">Moo Blizzard BLZD</span>
+                </div>
+              </div>
+              <div class="vault__title-apy">
+                <span>11.43k %</span>
+              </div>
+            </div>
+
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr class="vault__stat-deposit">
+                  <th>Deposit:</th>
+                  <td><span>10.01</span> BLZD</td>
+                  <td>$305.28</td>
+                </tr>
+                <tr class="vault__stat-yield">
+                  <th>Yield:</th>
+                  <td><span>0.1587</span> BLZD</td>
+                  <td><span>$4.82</span></td>
+                </tr>
+                <tr class="vault__stat-total">
+                  <th>Total:</th>
+                  <td><span>10.16</span> BLZD</td>
+                  <td><span>$61k</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="vaults__wrapper">
+          <div class="vault">
+            <div class="vault__title">
+              <div class="vault__title-left">
+                <img src="img/tokens/BIFI.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">BIFI Maxi</span>
+                </div>
+              </div>
+              <div class="vault__title-apy">
+                <span>19.20 %</span>
+              </div>
+            </div>
+
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr class="vault__stat-deposit">
+                  <th>Deposit:</th>
+                  <td><span>100.14</span> BIFI</td>
+                  <td><span>$30k</span></td>
+                </tr>
+                <tr class="vault__stat-yield">
+                  <th>Yield:</th>
+                  <td><span>0.0085</span> BIFI</td>
+                  <td><span>$40.82</span></td>
+                </tr>
+                <tr class="vault__stat-total">
+                  <th>Total:</th>
+                  <td><span>100.14</span> BIFI</td>
+                  <td><span>$30.52k</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="vaults__wrapper">
+          <div class="vault">
+            <div class="vault__title">
+              <div class="vault__title-left">
+                <img src="img/tokens/1INCH.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">Moo 1INCH 1INCH</span>
+                </div>
+              </div>
+              <div class="vault__title-apy">
+                <span>145 %</span>
+              </div>
+            </div>
+
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr class="vault__stat-deposit">
+                  <th>Deposit:</th>
+                  <td><span>10.01</span> 1INCH</td>
+                  <td><span>$305.28</span></td>
+                </tr>
+                <tr class="vault__stat-yield">
+                  <th>Yield:</th>
+                  <td><span>0.1587</span> 1INCH</td>
+                  <td><span>$4.82</span></td>
+                </tr>
+                <tr class="vault__stat-total">
+                  <th>Total:</th>
+                  <td><span>10.16</span> 1INCH</td>
+                  <td><span>$77.09k</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="vaults__wrapper">
+          <div class="vault">
+            <div class="vault__title">
+              <div class="vault__title-left">
+                <img src="img/tokens/beltETH.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">Belt ETH</span>
+                </div>
+              </div>
+              <div class="vault__title-apy">
+                <span>17.41 %</span>
+              </div>
+            </div>
+
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr class="vault__stat-deposit">
+                  <th>Deposit:</th>
+                  <td><span>1.97</span> beltETH</td>
+                  <td><span>$7.56k</span></td>
+                </tr>
+                <tr class="vault__stat-yield">
+                  <th>Yield:</th>
+                  <td><span>0.0054</span> beltETH</td>
+                  <td><span>$20.55</span></td>
+                </tr>
+                <tr class="vault__stat-total">
+                  <th>Total:</th>
+                  <td><span>1.98</span> beltETH</td>
+                  <td><span>$7.58k</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="vaults__wrapper">
+          <div class="vault">
+            <div class="vault__title">
+              <div class="vault__title-left">
+                <img src="img/tokens/belt4belt.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">Belt 4BELT</span>
+                </div>
+              </div>
+              <div class="vault__title-apy">
+                <span>38.87 %</span>
+              </div>
+            </div>
+
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr class="vault__stat-deposit">
+                  <th>Deposit:</th>
+                  <td><span>12.25k</span> 4BeltLP</td>
+                  <td><span>$12.43k</span></td>
+                </tr>
+                <tr class="vault__stat-yield">
+                  <th>Yield:</th>
+                  <td><span>189.21</span> 4BeltLP</td>
+                  <td><span>$191.97</span></td>
+                </tr>
+                <tr class="vault__stat-total">
+                  <th>Total:</th>
+                  <td><span>12.44k</span> 4BeltLP</td>
+                  <td><span>$12.62k</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /finance__vaults -->
+    </div> <!-- /finance -->
+
+    <div class="finance">
+      <div class="finance__title">
+        <img src="img/platforms/pancakeBunny.png" alt="logo">
+        <div class="platform">
+          <span class="platform__title">PancakeBunny</span>
+          <span class="platform__chain">Binance Smart Chain</span>
+        </div>
+      </div>
+
+      <div class="finance__vaults">
+        <div class="vaults__wrapper">
+          <div class="vault">
+            <div class="vault__title">
+              <div class="vault__title-left">
+                <img src="img/tokens/CAKE.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">Cake Vault</span>
+                </div>
+              </div>
+              <div class="vault__title-apy">
+                <span>302 %</span>
+              </div>
+            </div>
+
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr class="vault__stat-deposit">
+                  <th>Deposit:</th>
+                  <td><span>150.89</span> Cake</td>
+                  <td><span>$9.34k</span></td>
+                </tr>
+                <tr class="vault__stat-yield">
+                  <th>Yield:</th>
+                  <td><span>15.872</span> Cake</td>
+                  <td><span>$9k</span></td>
+                </tr>
+                <tr class="vault__stat-yield">
+                  <th></th>
+                  <td><span>1.45</span> Bunny</td>
+                  <td><span>$900.82</span></td>
+                </tr>
+                <tr class="vault__stat-total">
+                  <th>Total:</th>
+                  <td><span>166.66</span> Cake</td>
+                  <td><span>$34.5k</span></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
+    </div> <!-- /finance -->
+
+    <div class="finance">
+      <div class="finance__title">
+        <img src="img/platforms/blizzard.png" alt="logo">
+        <div class="platform">
+          <span class="platform__title">BLIZZARD.MONEY</span>
+          <span class="platform__chain">Binance Smart Chain</span>
+        </div>
+      </div>
+
+      <div class="finance__vaults">
+        <div class="vaults__wrapper">
+          <div class="vault">
+            <div class="vault__title">
+              <div class="vault__title-left">
+                <img src="img/tokens/xBLZD-BUSDBNB-LP.png" alt="logo">
+                <div class="vault__amount">
+                  <span class="vault__amount__title">xBLZD-BUSD/BNB Staking</span>
+                </div>
+              </div>
+              <div class="vault__title-apy">
+                <span>99k %</span>
+              </div>
+            </div>
+
+            <div class="vault__value">
+              <table class="vault__stat">
+                <tr class="vault__stat-deposit">
+                  <th>Deposit:</th>
+                  <td><span>150.89</span> xBLZD</td>
+                  <td><span>$3.1k</span></td>
+                </tr>
+                <tr class="vault__stat-yield">
+                  <th>Pending:</th>
+                  <td><span>0.2696</span> LP</td>
+                  <td><span>$3.1k</span></td>
+                </tr>
+                <tr class="vault__stat-yield">
+                  <th>Harvest:</th>
+                  <td><span>0.02322</span> LP</td>
+                  <td><span>$900.82</span></td>
+                </tr>
+                <tr class="vault__stat-total">
+                  <th>Total:</th>
+                  <td></td>
+                  <td><span>$34.7k</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /finance -->
+  </div> <!-- /container -->
+</div> <!-- /tab-content__item /data-tab="1" -->
+
+<!-- Wallet -->
+<div class="tab-content__item js-tab-content" data-tab="2">
+  <div class="container">
+    <div class="wallet">
+      <table class="wallet__table">
+        <thead>
+        <tr>
+          <th class="thead-cell">
+            <div class="thead-cell__item">
+              <div class="thead-cell__img">
+                <svg width="10" height="10" viewBox="0 0 10 11" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5"
+                        stroke="#808080" stroke-width="1.1" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div>
+                Token
+              </div>
+            </div>
+          </th>
+          <th class="thead-cell">
+            <div class="thead-cell__item-right">
+              <div class="thead-cell__img">
+                <svg width="10" height="10" viewBox="0 0 10 11" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.917 7.917L5 10.417l-2.917-2.5M2.083 3.917L5 1.417l2.917 2.5"
+                        stroke="#808080" stroke-width="1.1" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div>Price</div>
+            </div>
+          </th>
+          <th class="thead-cell">
+            <div class="thead-cell__item-right">
+              <div class="thead-cell__img">
+                <svg width="10" height="10" viewBox="0 0 10 11" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.917 7.917L5 10.417l-2.917-2.5" stroke="#808080"
+                        stroke-width="1.1" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div>
+                <span>Holdings</span>
+              </div>
+            </div>
+          </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td class="tbody-cell">
+            <div class="tbody-cell__token">
+              <div>
+                <img src="img/tokens/BIFI.png" alt="logo">
+              </div>
+              <div class="tbody-cell__item">
+                <div class="tbody-cell__token-ticker">
+                  <span>BIFI</span>
+                </div>
+                <div class="tbody-cell__token-name">
+                  <span>beefy.finance</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__token-prise">
+                <span>$1,209.79</span>
+              </div>
+              <div>
+                <div class="tbody-cell__prise-change down">
+                  <span class="">-7.36 %</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__hold-dollar">
+                <span>$120,979.00</span>
+              </div>
+              <div class="tbody-cell__hold-token">
+                <span>100</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tbody-cell">
+            <div class="tbody-cell__token">
+              <div>
+                <img src="img/tokens/BNB.png" alt="logo">
+              </div>
+              <div class="tbody-cell__item">
+                <div class="tbody-cell__token-ticker">
+                  <span>BNB</span>
+                </div>
+                <div class="tbody-cell__token-name">
+                  <span>Binance</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__token-prise">
+                <span>$526.69</span>
+              </div>
+              <div>
+                <div class="tbody-cell__prise-change down">
+                  <span class="">-10.78 %</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__hold-dollar">
+                <span>$52,669.00</span>
+              </div>
+              <div class="tbody-cell__hold-token">
+                <span>100</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tbody-cell">
+            <div class="tbody-cell__token">
+              <div>
+                <img src="img/tokens/DOT.png" alt="logo">
+              </div>
+              <div class="tbody-cell__item">
+                <div class="tbody-cell__token-ticker">
+                  <span>DOT</span>
+                </div>
+                <div class="tbody-cell__token-name">
+                  <span>Polkadot Token</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__token-prise">
+                <span>$39.45</span>
+              </div>
+              <div>
+                <div class="tbody-cell__prise-change down">
+                  <span class="">-11.43 %</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__hold-dollar">
+                <span>$39,450.00</span>
+              </div>
+              <div class="tbody-cell__hold-token">
+                <span>1000</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tbody-cell">
+            <div class="tbody-cell__token">
+              <div>
+                <img src="img/tokens/BUSD.png" alt="logo">
+              </div>
+              <div class="tbody-cell__item">
+                <div class="tbody-cell__token-ticker">
+                  <span>BUSD</span>
+                </div>
+                <div class="tbody-cell__token-name">
+                  <span>BUSD Token</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__token-prise">
+                <span>$1.00</span>
+              </div>
+              <div>
+                <div class="tbody-cell__prise-change up">
+                  <span class="">+0.01 %</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__hold-dollar">
+                <span>$35,000.00</span>
+              </div>
+              <div class="tbody-cell__hold-token">
+                <span>35000</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tbody-cell">
+            <div class="tbody-cell__token">
+              <div>
+                <img src="img/tokens/UNI.png" alt="logo">
+              </div>
+              <div class="tbody-cell__item">
+                <div class="tbody-cell__token-ticker">
+                  <span>UNI</span>
+                </div>
+                <div class="tbody-cell__token-name">
+                  <span>Uniswap</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__token-prise">
+                <span>$34.88</span>
+              </div>
+              <div>
+                <div class="tbody-cell__prise-change down">
+                  <span class="">-7.71 %</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__hold-dollar">
+                <span>$34,880.00</span>
+              </div>
+              <div class="tbody-cell__hold-token">
+                <span>1000</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tbody-cell">
+            <div class="tbody-cell__token">
+              <div>
+                <img src="img/tokens/CAKE.png" alt="logo">
+              </div>
+              <div class="tbody-cell__item">
+                <div class="tbody-cell__token-ticker">
+                  <span>CAKE</span>
+                </div>
+                <div class="tbody-cell__token-name">
+                  <span>PancakeSwap Token</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__token-prise">
+                <span>$25.00</span>
+              </div>
+              <div>
+                <div class="tbody-cell__prise-change down">
+                  <span class="">-13.47 %</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__hold-dollar">
+                <span>$25,000.00</span>
+              </div>
+              <div class="tbody-cell__hold-token">
+                <span>1000</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tbody-cell">
+            <div class="tbody-cell__token">
+              <div>
+                <img src="img/tokens/TWT.png" alt="logo">
+              </div>
+              <div class="tbody-cell__item">
+                <div class="tbody-cell__token-ticker">
+                  <span>TWT</span>
+                </div>
+                <div class="tbody-cell__token-name">
+                  <span>Trust Wallet</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__token-prise">
+                <span>$0.75</span>
+              </div>
+              <div>
+                <div class="tbody-cell__prise-change down">
+                  <span class="">-7.32 %</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__hold-dollar">
+                <span>$7,500.00</span>
+              </div>
+              <div class="tbody-cell__hold-token">
+                <span>10000</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tbody-cell">
+            <div class="tbody-cell__token">
+              <div>
+                <img src="img/tokens/ETH.png" alt="logo">
+              </div>
+              <div class="tbody-cell__item">
+                <div class="tbody-cell__token-ticker">
+                  <span>ETH</span>
+                </div>
+                <div class="tbody-cell__token-name">
+                  <span>Ethereum Token</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__token-prise">
+                <span>$3,422.12</span>
+              </div>
+              <div>
+                <div class="tbody-cell__prise-change down">
+                  <span class="">-7.34 %</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__hold-dollar">
+                <span>$3,422.12</span>
+              </div>
+              <div class="tbody-cell__hold-token">
+                <span>1</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tbody-cell">
+            <div class="tbody-cell__token">
+              <div>
+                <img src="img/tokens/BUNNY.png" alt="logo">
+              </div>
+              <div class="tbody-cell__item">
+                <div class="tbody-cell__token-ticker">
+                  <span>BUNNY</span>
+                </div>
+                <div class="tbody-cell__token-name">
+                  <span>Bunny Token</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__token-prise">
+                <span>$243.31</span>
+              </div>
+              <div>
+                <div class="tbody-cell__prise-change down">
+                  <span class="">-13.42 %</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__hold-dollar">
+                <span>$2,433.10</span>
+              </div>
+              <div class="tbody-cell__hold-token">
+                <span>10</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="tbody-cell">
+            <div class="tbody-cell__token">
+              <div>
+                <img src="img/tokens/1INCH.png" alt="logo">
+              </div>
+              <div class="tbody-cell__item">
+                <div class="tbody-cell__token-ticker">
+                  <span>1INCH</span>
+                </div>
+                <div class="tbody-cell__token-name">
+                  <span>1INCH Token</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__token-prise">
+                <span>$5.03</span>
+              </div>
+              <div>
+                <div class="tbody-cell__prise-change down">
+                  <span class="">-9.6 %</span>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="tbody-cell">
+            <div class="tbody-cell__item">
+              <div class="tbody-cell__hold-dollar">
+                <span>$503.00</span>
+              </div>
+              <div class="tbody-cell__hold-token">
+                <span>100</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table> <!-- /wallet__table -->
+    </div> <!-- /wallet -->
+  </div> <!-- /container -->
+</div> <!-- /tab-content__item /data-tab="2" -->
+
+<!-- Exchange Rates -->
+<div class="tab-content__item js-tab-content" data-tab="3">
+  <div class="container">
+    <div class="exchange-rates">
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com"
+                                                     rel="noopener" target="_blank"><span
+            class="blue-text">Криптовалюта</span></a> от TradingView
+        </div>
+        <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"
+                async>
+          {
+            "colorTheme"
+          :
+            "dark",
+              "dateRange"
+          :
+            "1D",
+              "showChart"
+          :
+            true,
+              "locale"
+          :
+            "ru",
+              "width"
+          :
+            "100%",
+              "height"
+          :
+            "100%",
+              "largeChartUrl"
+          :
+            "",
+              "isTransparent"
+          :
+            true,
+              "showSymbolLogo"
+          :
+            true,
+              "plotLineColorGrowing"
+          :
+            "rgba(106, 168, 79, 1)",
+              "plotLineColorFalling"
+          :
+            "rgba(166, 28, 0, 1)",
+              "gridLineColor"
+          :
+            "rgba(42, 46, 57, 1)",
+              "scaleFontColor"
+          :
+            "rgba(120, 123, 134, 1)",
+              "belowLineFillColorGrowing"
+          :
+            "rgba(33, 150, 243, 0.12)",
+              "belowLineFillColorFalling"
+          :
+            "rgba(33, 150, 243, 0.12)",
+              "symbolActiveColor"
+          :
+            "rgba(33, 150, 243, 0.12)",
+              "tabs"
+          :
+            [
+              {
+                "title": "Криптовалюта",
+                "symbols": [
+                  {
+                    "s": "BINANCE:BTCUSDT",
+                    "d": "BTC Binance"
+                  },
+                  {
+                    "s": "BINANCE:ETHUSDT",
+                    "d": "ETH Binance"
+                  },
+                  {
+                    "s": "BINANCE:BNBUSDT",
+                    "d": "BNB Binance"
+                  },
+                  {
+                    "s": "BINANCE:ADAUSDT",
+                    "d": "ADA Binance"
+                  },
+                  {
+                    "s": "BINANCE:DOGEUSDT",
+                    "d": "DOGE Binance"
+                  },
+                  {
+                    "s": "KRAKEN:USDTUSD"
+                  },
+                  {
+                    "s": "BINANCE:XRPUSDT",
+                    "d": "XRP Bianance"
+                  },
+                  {
+                    "s": "BINANCE:DOTUSDT",
+                    "d": "DOT Binance"
+                  },
+                  {
+                    "s": "BINANCE:ICPUSDT",
+                    "d": "ICP Binance"
+                  },
+                  {
+                    "s": "BINANCE:BCHUSDT",
+                    "d": "BCH Binance"
+                  }
+                ]
+              }
+            ]
+          }
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+
+    </div> <!-- /exchange-rates -->
+  </div> <!-- /container -->
+</div> <!-- /tab-content__item /data-tab="3" -->
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__block">
+        <div class="footer__social">
+          <a target="_blank" href="#" class="footer__social-link">Telegram</a>
+          <a target="_blank" href="#" class="footer__social-link">Twitter</a>
+          <a target="_blank" href="#" class="footer__social-link">Medium</a>
+          <a target="_blank" href="#" class="footer__social-link">GitHub</a>
+        </div>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="script/main.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="script/main.js"></script>
-
-</body> <!-- /body -->
+</body>
 </html>
