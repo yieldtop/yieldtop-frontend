@@ -1,0 +1,756 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #6c7279;
+  -webkit-font-smoothing: antialiased;
+  background-color: #20242A;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul, ol, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1 {
+  color: #505e75;
+  font-size: 1.4rem;
+}
+
+/* Container
+======================*/
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/* Header
+======================*/
+.header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 40;
+}
+
+.header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #20242A;
+  z-index: 2;
+}
+
+.header__inner {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.header__logo {
+  text-align: center;
+  margin: 20px 0;
+}
+.header__logo img {
+  max-width: 40%;
+  max-height: 60px;
+  text-align: center;
+}
+
+.wallet-input {
+  padding: 3px 30px;
+  margin: 0 10px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #505e75;
+  width: 370px;
+  background: #2b2f38;
+  border: 1px solid #2D3136;
+  border-radius: 40px;
+  background-image: url(../img/nav/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  position: relative;
+  z-index: 3;
+}
+
+.wallet-input::placeholder {
+  color: #505e75;
+}
+
+.wallet-input:focus {
+  border-color: #FFAD17;
+  outline: 0;
+  caret-color: #FFAD17;
+}
+
+/* Header tabs
+======================*/
+.header__tabs {
+  display: flex;
+  position: relative;
+  z-index: 3;
+  border-radius: 4px;
+}
+
+.header__tabs-item {
+  margin: 2px;
+  padding: 6px;
+  min-width: 120px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.header__tabs-item a:hover {
+  color: #FFAD17;
+}
+
+.header__tabs-item a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #505e75;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header__tabs-item.active a {
+  color: #FFAD17;
+}
+
+.header__tabs-item.active {
+  position: relative;
+}
+
+.tab-content__item {
+  display: none;
+}
+
+.tab-content__item.active {
+  display: block;
+}
+
+/* Burger
+======================*/
+.header__burger {
+  display: block;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.header__burger span {
+  position: absolute;
+  background-color: #505e75;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  top: 9px;
+  transition: all 0.3s ease 0s;
+}
+
+.header__burger:before,
+.header__burger:after {
+  content: '';
+  background-color: #505e75;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.header__burger:before {
+  top: 0;
+}
+
+.header__burger:after {
+  bottom: 0;
+}
+
+.header__burger.active:before {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.header__burger.active:after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+.header__burger.active span {
+  transform: scale(0);
+}
+
+.header__burger-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: calc(30%);
+  min-width: 250px;
+  height: 100%;
+  overflow: auto;
+  background-color: #262a31;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 70px 10px 20px 10px;
+  /* border-radius: 0px 30px 30px 0px; */
+  transition: all 0.3s ease 0s;
+}
+
+.header__burger-menu.active {
+  left: 0;
+}
+
+.header__link {
+  color: #D8D8D8;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.header__link:hover {
+  color: #FFAD17;
+}
+
+.header__list {
+  display: block;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.header__list li {
+  margin-bottom: 20px;
+}
+.header__list img {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Deposit
+======================*/
+.dep {
+  display: flex;
+  justify-content: space-around;
+  margin: 90px 10px 10px 10px;
+  background-color: #20242A;
+  border-radius: 10px;
+}
+
+.dep__inner {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.dep__inner h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.dep__value {
+  display: block;
+  margin-top: 5px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Vaults
+======================*/
+.finance {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.finance__title {
+  display: flex;
+  align-items: center;
+  margin: 30px 10px 5px 10px;
+  border-bottom: 1px solid #252A31;
+}
+
+.finance__title img {
+  height: 70px;
+  border-radius: 50%;
+  margin: 15px 15px 15px 0;
+}
+
+.platform {
+  display: flex;
+  flex-direction: column;
+}
+
+.platform__title {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+.platform__chain {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #505e75;
+}
+
+.finance__vaults {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 5px;
+}
+
+.vaults__wrapper {
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 33.3333%;
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+
+.vault {
+  background-color: #262A32;
+  border-radius: 10px;
+}
+.vault__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px 5px 15px;
+}
+
+.vault__title-left {
+  display: flex;
+  align-items: center;
+}
+
+.vault__title-apy {
+  color: #FFAD17;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-left: 10px;
+  text-align: right;
+  min-width: 70px;
+}
+
+.vault__title img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.vault__amount {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.vault__amount__title {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.vault__value {
+  font-size: 1rem;
+  color: #fff;
+  padding: 10px 20px 10px 15px;
+}
+
+.vault__value td {
+  padding: 10px 5px 10px 0;
+  line-height: 1.4;
+}
+
+.vault__stat {
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 1.3;
+  text-align: right;
+}
+
+.vault__stat th {
+  font-weight: 700;
+  color: #505e75;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  /* text-transform: uppercase; */
+}
+
+.vault__stat-total {
+  border-top: 1px solid #343a44;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+
+
+/* Wallet
+======================*/
+.wallet {
+  margin: 120px 20px 0 20px;
+}
+.wallet__table {
+  width: 100%;
+  background-color: #262a31;
+  border-radius: 10px;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: #fff;
+}
+.thead-cell {
+  border-bottom: 1px solid #2c3441;
+  padding: 15px;
+  width: 33.3333%;
+}
+.thead-cell__item {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.thead-cell__img {
+  margin-right: 10px;
+}
+.thead-cell__item-right {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  justify-content: flex-end;
+}
+.tbody-cell {
+  padding: 10px 15px;
+  width: 33.3333%;
+}
+.tbody-cell__token {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tbody-cell__token img {
+  height: 40px;
+  margin: 10px 10px 10px 0;
+  border-radius: 50%;
+}
+.tbody-cell__item {
+  display: flex;
+  flex-direction: column;
+}
+.tbody-cell__token-ticker {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding-bottom: 5px;
+}
+.tbody-cell__token-name {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #505e75;
+}
+.tbody-cell__token-prise {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding-bottom: 5px;
+  text-align: right;
+}
+.tbody-cell__prise-change {
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: right;
+}
+.tbody-cell__prise-change.up {
+  color: #52c22f;
+}
+.tbody-cell__prise-change.down {
+  color: #ff6e6e;
+}
+.tbody-cell__hold-dollar {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding-bottom: 5px;
+  text-align: right;
+}
+.tbody-cell__hold-token {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #505e75;
+  text-align: right;
+}
+
+/* Footer
+======================*/
+.footer {
+  margin-top: 30px;
+  border-top: 1px solid #252A31;
+}
+
+.footer__block {
+  margin: 10px;
+}
+
+.copyright__text {
+  margin: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #B2B3B4;
+}
+
+.footer__social {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer__social-link {
+  text-decoration: none;
+  color: #505e75;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.footer__social-link:hover {
+  color: #FFAD17;
+}
+
+/* Полоса прокрутки ======================*/
+::-webkit-scrollbar-button {
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:6px;
+  height:0px
+  }
+
+  ::-webkit-scrollbar-track {
+  background-color:#32312e;
+  box-shadow:0px 0px 3px #000 inset;
+  }
+
+  ::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color:#FFAD17;
+  box-shadow:0px 1px 1px #FFAD17 inset;
+  background-image:url('https://yield.galyshev.pro/img/scrollbar.png');
+  background-position:center;
+  background-repeat:no-repeat;
+  }
+
+  ::-webkit-resizer{
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:7px;
+  height:0px
+  }
+
+  ::-webkit-scrollbar{
+  width: 7px;
+  }
+
+  /* LightMode Theme
+======================*/
+.dark-mode {
+  background-color: #eeeeee;
+}
+.dark-mode h1 {
+  color: #808080;
+}
+.dark-mode .header:before {
+  background-color: #eeeeee;
+}
+.dark-mode .header__tabs {
+  background-color: #eeeeee;
+}
+.dark-mode .header__tabs-item a {
+  color: #808080;
+}
+.dark-mode .header__tabs-item.active a {
+  color: #FFAD17;
+}
+.dark-mode .header__burger-menu {
+  background-color: #FFFFFF;
+  /* box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5); */
+}
+.dark-mode .header__link {
+  color: #000002;
+}
+.dark-mode .header__list a:hover {
+  color: #FFAD17;
+}
+.dark-mode .wallet-input {
+  background-color: #dadada;
+  border: 1px solid #dadada;
+}
+.dark-mode .wallet-input::placeholder {
+  color: #808080;
+}
+.dark-mode .dep {
+  background-color: #eeeeee;
+}
+.dark-mode .dep__value {
+  color: #000002;
+}
+.dark-mode .finance__title {
+  border-bottom: 1px solid #dadada;
+}
+.dark-mode .platform__title {
+  color: #000002;
+}
+.dark-mode .platform__chain {
+  color: #808080;
+}
+.dark-mode .vault {
+  background-color: #FFFFFF;
+}
+.dark-mode .vault__amount__title {
+  color: #808080;
+}
+.dark-mode .vault__stat th {
+  color: #808080;
+}
+.dark-mode .vault__value {
+  color: #000002;
+}
+.dark-mode .wallet__table {
+  background-color: #ffffff;
+  color: #000002;
+}
+.dark-mode .footer {
+  border-top: 1px solid #dadada;
+}
+
+/* Adaptive
+======================*/
+@media screen and (max-width:992px) {
+  .header__tabs-item {
+    min-width: 100px;
+  }
+  .vaults__wrapper {
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .header__inner {
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+  }
+  .header__logo {
+    margin-top: 50px;
+  }
+  .vaults__wrapper {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .wallet {
+    margin: 140px 10px 0 10px;
+  }
+  .wallet-input {
+    margin: 10px;
+    width: 70vw;
+  }
+  .dep {
+    margin: 110px 10px 10px 10px;
+  }
+  .header__burger-menu {
+    width: calc(50%);
+  }
+  .dep__inner h1 {
+    font-size: 0.8rem;
+  }
+  .dep__value {
+    font-size: 1.2rem;
+  }
+  .finance__title {
+    margin-top: 10px;
+  }
+  .platform__title {
+    font-size: 1.2rem;
+  }
+  .platform__chain {
+    font-size: 0.9rem;
+  }
+  .vault__amount__title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width:460px) {
+  .tbody-cell__token img {
+    height: 35px;
+  }
+  .tbody-cell__token-ticker {
+    font-size: 0.9rem;
+  }
+  .tbody-cell__token-name {
+    font-size: 0.8rem;
+  }
+  .tbody-cell__token-prise {
+    font-size: 0.9rem;
+  }
+  .tbody-cell__prise-change {
+    font-size: 0.8rem;
+
+  }
+  .tbody-cell__hold-dollar {
+    font-size: 0.9rem;
+  }
+  .tbody-cell__hold-token {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media screen and (max-width:375px) {
+  .header__tabs-item a {
+    font-size: 0.8rem;
+  }
+  .dep__inner h1 {
+    font-size: 0.7rem;
+  }
+  .dep__value {
+    font-size: 1rem;
+  }
+  .platform__title {
+    font-size: 1.2rem;
+  }
+  .platform__chain {
+    font-size: 0.9rem;
+  }
+  .vault__amount__title {
+    font-size: 1rem;
+  }
+  .vault__value {
+    font-size: 0.8rem;
+  }
+  .vault__value th{
+    font-size: 0.8rem;
+  }
+  .vault__stat-total {
+    font-size: 0.9rem;
+  }
+}
