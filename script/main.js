@@ -9,9 +9,9 @@ for (let i = 0; i < tabTrigger.length; i++) {
       tabTrigger[k].classList.remove('active');
     }
     this.classList.add('active');
-
+    
     let tabTriggerAttr = this.getAttribute('data-tab');
-
+    
     for (let j = 0; j < tabContent.length; j++) {
       tabContent[j].classList.remove('active');
       let tabContentAttr = tabContent[j].getAttribute('data-tab');
@@ -74,13 +74,13 @@ addLightClassToBody();
 /* Модальное окно Connect Wallet
 ==================================*/
 const btnConnect = document.getElementById("btn-connect"),
-  modal = document.getElementById("wrapper-modal"),
-  btnClose = document.getElementById("btn-close"),
-  overlay = document.getElementById("overlay");
+    modal = document.getElementById("wrapper-modal"),
+    btnClose = document.getElementById("btn-close"),
+    overlay = document.getElementById("overlay");
 
 btnConnect.addEventListener("click", (addClass = () => {
-    modal.classList.add("active");
-  })
+      modal.classList.add("active");
+    })
 );
 
 const delClass = () => {
