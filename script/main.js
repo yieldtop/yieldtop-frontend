@@ -44,7 +44,6 @@ burgerOverlay.onclick = function () {
   burgerSvg.classList.remove('active');
 }
 
-
 /* Смена темы оформления
 ==================================*/
 document.querySelector(".themetoggle").addEventListener("click", (event) => {
