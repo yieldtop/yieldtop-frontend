@@ -927,7 +927,6 @@ h1 {
 @media screen and (max-width: 410px) {
   .wallet-input {
     width: auto;
-
     text-overflow: ellipsis;
   }
   .header__inner {
